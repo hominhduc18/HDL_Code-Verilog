@@ -1,0 +1,11 @@
+|baimot
+ck => current_state~1.DATAIN
+rs => current_state~3.DATAIN
+c => next_state.s101.DATAB
+c => next_state.s1011.DATAB
+c => Selector0.IN2
+c => next_state.start.DATAB
+c => Selector1.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+

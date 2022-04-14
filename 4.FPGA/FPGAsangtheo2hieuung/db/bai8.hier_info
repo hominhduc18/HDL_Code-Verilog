@@ -1,0 +1,43 @@
+|bai8
+ck => current_state~1.DATAIN
+rs => current_state~3.DATAIN
+s => next_state.s1.DATAB
+s => next_state.s2.DATAB
+s => next_state.s3.DATAB
+s => next_state.s4.DATAB
+s => next_state.s5.DATAB
+s => next_state.s6.DATAB
+s => next_state.s7.DATAB
+s => next_state.s8.DATAB
+s => Selector0.IN10
+s => Selector0.IN11
+s => Selector0.IN12
+s => Selector0.IN13
+s => Selector0.IN14
+s => Selector0.IN15
+s => Selector0.IN16
+s => Selector0.IN2
+s => Selector0.IN3
+s => Selector0.IN4
+s => Selector0.IN5
+s => Selector0.IN6
+s => Selector0.IN7
+s => Selector0.IN8
+s => next_state.s9.DATAB
+s => next_state.s10.DATAB
+s => next_state.s11.DATAB
+s => next_state.s12.DATAB
+s => next_state.s13.DATAB
+s => next_state.s14.DATAB
+s => next_state.s15.DATAB
+s => next_state.s16.DATAB
+led[0] <= led.DB_MAX_OUTPUT_PORT_TYPE
+led[1] <= WideOr6.DB_MAX_OUTPUT_PORT_TYPE
+led[2] <= WideOr5.DB_MAX_OUTPUT_PORT_TYPE
+led[3] <= WideOr4.DB_MAX_OUTPUT_PORT_TYPE
+led[4] <= WideOr3.DB_MAX_OUTPUT_PORT_TYPE
+led[5] <= WideOr2.DB_MAX_OUTPUT_PORT_TYPE
+led[6] <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
+led[7] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+
+

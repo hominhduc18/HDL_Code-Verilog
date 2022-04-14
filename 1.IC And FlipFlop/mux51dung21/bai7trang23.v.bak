@@ -1,0 +1,52 @@
+module bai7trang23(s,a,y);
+input [2:0]s;
+input [4:0]a;
+output y;
+wire b,c,d;
+mux2_1 H1(s[0],a[0],a[1],b);
+mux2_1 H2(s[0],a[2],a[3],c);
+mux2_1 H3(s[1],b,c,d);
+mux2_1 H4(s[2],a[4],d,y);
+endmodule
+
+module mux2_1(x,z,v);
+input [1:0]z;
+input x;
+output v;
+assign v=(~x&z[0])|(x&z[1]);
+endmodule
+
+module TB_bai7trang23();
+reg [2:0]S;
+reg [4:0]A;
+reg Y;
+wire Y;
+initial 
+begin
+A=2'b00;
+S=3'b000;
+#100
+A=2'b01;
+S=3'b001;
+#100
+A=2'b10;
+S=3'b010;
+#100
+A=2'b11;
+S=3'b011;
+#100
+A=2'b01;
+S=3'b100;
+#100
+A=2'b01;
+S=3'b101;
+#100
+A=2'b01;
+S=3'b110;
+#100
+A=2'b01;
+S=3'b111;
+#2000 $finish;
+end
+bai7trang23 D(.S(s),.A(a),.Y(y));
+endmodule

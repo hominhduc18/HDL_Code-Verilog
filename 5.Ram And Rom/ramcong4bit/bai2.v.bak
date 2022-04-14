@@ -1,0 +1,21 @@
+
+module bai2(DATA_IN,DATA_OUT,ADDRESS,CS,WE,CLK);
+input [7:0]DATA_IN;
+output reg [7:0]DATA_OUT;
+input [7:0]ADDRESS;
+input CS,WE,CLK;
+reg [7:0]SRAM[255:0]; //SRAM có 256 địa chỉ, mỗi địa chỉ lưu data 8bit
+
+always @ (posedge CLK)
+begin
+if (CS==1'b1)
+begin
+if (WE==1'b1)
+SRAM[ADDRESS] <= DATA_IN;
+else
+DATA_OUT <= SRAM[ADDRESS] ;
+end
+else
+DATA_OUT <= 8'bxxxxxxxx;
+end
+endmodule

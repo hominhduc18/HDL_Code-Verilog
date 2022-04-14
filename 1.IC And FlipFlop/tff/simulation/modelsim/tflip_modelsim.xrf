@@ -1,0 +1,10 @@
+vendor_name = ModelSim
+source_file = 1, E:/HDL/tff/tflip.v
+source_file = 1, E:/HDL/tff/db/tflip.cbx.xml
+design_name = tflip
+instance = comp, \ck~I\, ck, tflip, 1
+instance = comp, \t~I\, t, tflip, 1
+instance = comp, \q~0\, q~0, tflip, 1
+instance = comp, \rs~I\, rs, tflip, 1
+instance = comp, \q~reg0\, q~reg0, tflip, 1
+instance = comp, \q~I\, q, tflip, 1

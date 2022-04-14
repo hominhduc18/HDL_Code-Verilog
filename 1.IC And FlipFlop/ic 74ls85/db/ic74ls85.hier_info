@@ -1,0 +1,42 @@
+|ic74ls85
+A[0] => LessThan6.IN1
+A[0] => LessThan7.IN1
+A[1] => LessThan4.IN1
+A[1] => LessThan5.IN1
+A[1] => always0.IN0
+A[2] => LessThan2.IN1
+A[2] => LessThan3.IN1
+A[2] => always0.IN0
+A[3] => LessThan0.IN1
+A[3] => LessThan1.IN1
+A[3] => always0.IN0
+B[0] => LessThan6.IN2
+B[0] => LessThan7.IN2
+B[1] => LessThan4.IN2
+B[1] => LessThan5.IN2
+B[1] => always0.IN1
+B[2] => LessThan2.IN2
+B[2] => LessThan3.IN2
+B[2] => always0.IN1
+B[3] => LessThan0.IN2
+B[3] => LessThan1.IN2
+B[3] => always0.IN1
+E[0] => always0.IN1
+E[0] => always0.IN1
+E[0] => always0.IN1
+E[0] => always0.IN1
+E[0] => always0.IN1
+E[1] => always0.IN0
+E[1] => always0.IN0
+E[1] => always0.IN0
+E[1] => Y[2].IN1
+E[1] => Y[2].OUTPUTSELECT
+E[1] => Y[1].DATAA
+E[2] => always0.IN1
+E[2] => always0.IN1
+E[2] => always0.IN1
+Y[0] <= Y[0]$latch.DB_MAX_OUTPUT_PORT_TYPE
+Y[1] <= Y[1]$latch.DB_MAX_OUTPUT_PORT_TYPE
+Y[2] <= Y[2]$latch.DB_MAX_OUTPUT_PORT_TYPE
+
+

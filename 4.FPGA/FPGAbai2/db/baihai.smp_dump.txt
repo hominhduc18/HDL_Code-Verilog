@@ -1,0 +1,8 @@
+
+State Machine - |baihai|current_state
+Name current_state.s011 current_state.s01 current_state.s0 current_state.start current_state.s0110 
+current_state.start 0 0 0 0 0 
+current_state.s0 0 0 1 1 0 
+current_state.s01 0 1 0 1 0 
+current_state.s011 1 0 0 1 0 
+current_state.s0110 0 0 0 1 1 

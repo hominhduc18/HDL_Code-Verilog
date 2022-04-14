@@ -1,0 +1,67 @@
+module decoder41638(in,out); 
+input [3:0]in; 
+output [15:0]out; 
+wire notout; 
+not (notout, in[3]); 
+decoder3_8 u1(out[7:0],in[2],in[2:0]); 
+decoder3_8 u2(out[15:8],notout,in[2:0]); 
+endmodule 
+module decoder3_8(i,o,e);
+input [2:0] i;
+input e;
+output [7:0] o;
+reg [7:0] o;
+always @( i or e)
+begin
+if(e==1'b0)
+		o=8'b00000000;
+else
+begin
+	case(i)
+			3'b000: o[0]=1'b1;
+         3'b001: o[1]=1'b1;
+         3'b010: o[2]=1'b1;
+         3'b011: o[3]=1'b1;
+         3'b100: o[4]=1'b1;
+         3'b101: o[5]=1'b1;
+         3'b110: o[6]=1'b1;
+         3'b111: o[7]=1'b1;
+			endcase
+end
+end
+endmodule
+module TB_decoder41638();
+reg out,en;
+reg [2:0]in;
+initial
+begin
+en=1;
+in=2'b00;
+#100
+en=1;
+in=2'b01;
+#100
+en=1;
+in=2'b10;
+#100
+en=1;
+in=2'b11;
+#100
+en=1;
+in=2'b00;
+#100
+en=0;
+in=2'b01;
+#100
+en=1;
+in=2'b10;
+#100
+en=0;
+in=2'b11;
+#2000 $finish;
+end
+decoder41638 D(.in(in),.out(out),.en(en));
+endmodule         
+	
+	
+

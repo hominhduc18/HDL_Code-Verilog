@@ -1,0 +1,34 @@
+|bai9
+ck => curent~1.DATAIN
+rs => curent~3.DATAIN
+hex[0] <= WideOr9.DB_MAX_OUTPUT_PORT_TYPE
+hex[1] <= WideOr8.DB_MAX_OUTPUT_PORT_TYPE
+hex[2] <= WideOr7.DB_MAX_OUTPUT_PORT_TYPE
+hex[3] <= WideOr6.DB_MAX_OUTPUT_PORT_TYPE
+hex[4] <= WideOr5.DB_MAX_OUTPUT_PORT_TYPE
+hex[5] <= WideOr4.DB_MAX_OUTPUT_PORT_TYPE
+hex[6] <= WideOr3.DB_MAX_OUTPUT_PORT_TYPE
+stop => curent.statestop.DATAIN
+stop => next.state18.DATAB
+stop => Selector0.IN1
+stop => next.state2.DATAB
+stop => next.state3.DATAB
+stop => next.state4.DATAB
+stop => next.state5.DATAB
+stop => next.state6.DATAB
+stop => next.state7.DATAB
+stop => next.state8.DATAB
+stop => next.state9.DATAB
+stop => next.state10.DATAB
+stop => next.state11.DATAB
+stop => next.state12.DATAB
+stop => next.state13.DATAB
+stop => next.state14.DATAB
+stop => next.state15.DATAB
+stop => next.state16.DATAB
+stop => next.state17.DATAB
+led_do <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
+led_vang <= led_vang.DB_MAX_OUTPUT_PORT_TYPE
+led_xanh <= WideOr2.DB_MAX_OUTPUT_PORT_TYPE
+
+

@@ -1,0 +1,14 @@
+Analysis & Synthesis Status : Successful - Tue Nov 23 21:11:30 2021
+Quartus II 64-Bit Version : 13.0.0 Build 156 04/24/2013 SJ Web Edition
+Revision Name : Nhan3bit
+Top-level Entity Name : Nhan3bit
+Family : Cyclone II
+Total logic elements : 17
+    Total combinational functions : 17
+    Dedicated logic registers : 0
+Total registers : 0
+Total pins : 12
+Total virtual pins : 0
+Total memory bits : 0
+Embedded Multiplier 9-bit elements : 0
+Total PLLs : 0

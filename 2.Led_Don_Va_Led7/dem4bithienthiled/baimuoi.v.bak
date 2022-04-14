@@ -1,0 +1,115 @@
+// chương trình gọi hàm 
+module baimuoi(CK,RS,HEX0,HEX1);
+input CK,RS;
+output [7:0]HEX0,HEX1;
+reg[7:0]HEX0,HEX1;
+wire [3:0]Q;
+dem4bit H1(CK,RS,Q);
+giaima  H2(Q,HEX0,HEX1);
+endmodule
+// viết chương trình bộ đếm nhị phân 4bit 
+module dem4bit(ck,rs,q);
+input ck,rs;
+output [3:0]q;
+reg [3:0]q;
+always @(posedge ck or negedge rs)
+//Ck tác động theo cạnh lên, chân RS không đồng bộ và tích cực mức thấp
+begin 
+if(rs==1'b0)
+    q<=4'b0000;
+else
+    q<=q+1'b1;
+end
+endmodule
+// chương trình giải mã 
+module giaima(a,hex0,hex1);
+input [3:0]a;
+output [7:0]hex0,hex1;
+always @(*)
+begin 
+case(a) 
+4'b0000:
+begin
+hex0=8'h8A;
+hex1=8'hFF;
+end
+4'b0001:
+begin
+hex0=8'hF9;
+hex1=8'hFF;
+end
+4'b0010:
+begin
+hex0=8'hA4;
+hex1=8'hFF;
+end
+4'b0011:
+begin
+hex0=8'hB0;
+hex1=8'hFF;
+end
+4'b0100:
+begin
+hex0=8'hAB;
+hex1=8'hFF;
+end
+4'b0101:
+begin
+hex0=8'h99;
+hex1=8'hFF;
+end
+4'b0110:
+begin
+hex0=8'h8A;
+hex1=8'hFF;
+end
+4'b0111:
+begin
+hex0=8'hF8;
+hex1=8'hFF;
+end
+4'b1000:
+begin
+hex0=8'h80;
+hex1=8'hFF;
+end
+4'b1001:
+begin
+hex0=8'hC0;
+hex1=8'h8A;
+end
+4'b1010:
+begin
+hex0=8'hF9;
+hex1=8'h8A;
+end
+4'b1011:
+begin
+hex0=8'hA4;
+hex1=8'h8A;
+end
+4'b1100:
+begin
+hex0=8'hB0;
+hex1=8'h8A;
+end
+4'b1101:
+begin
+hex0=8'hAB;
+hex1=8'h8A;
+end
+4'b1110:
+begin
+hex0=8'h99;
+hex1=8'h8A;
+end
+4'b1111:
+begin
+hex0=8'h82;
+hex1=8'h8A;
+end
+endcase
+end
+endmodule
+
+

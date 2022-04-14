@@ -1,0 +1,13 @@
+module (A,B,Y);
+input [3:0]A;
+input [3:0]B;
+output [2:0]Y;
+reg [2:0]Y;
+always @(*)
+begin 
+	if(A[3]>B[3])
+		Y[2]=1'b1;
+	else
+	Y[1]=1'b1;
+end 
+endmodule

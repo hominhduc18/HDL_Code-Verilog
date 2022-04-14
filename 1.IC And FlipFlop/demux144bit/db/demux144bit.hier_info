@@ -1,0 +1,101 @@
+|demux144bit
+s[0] => s[0].IN4
+s[1] => s[1].IN4
+x[0] => x[0].IN1
+x[1] => x[1].IN1
+x[2] => x[2].IN1
+x[3] => x[3].IN1
+a[0] <= demux1_4:h1.port0
+a[1] <= demux1_4:h2.port0
+a[2] <= demux1_4:h3.port0
+a[3] <= demux1_4:h4.port0
+b[0] <= demux1_4:h1.port0
+b[1] <= demux1_4:h2.port0
+b[2] <= demux1_4:h3.port0
+b[3] <= demux1_4:h4.port0
+c[0] <= demux1_4:h1.port0
+c[1] <= demux1_4:h2.port0
+c[2] <= demux1_4:h3.port0
+c[3] <= demux1_4:h4.port0
+d[0] <= demux1_4:h1.port0
+d[1] <= demux1_4:h2.port0
+d[2] <= demux1_4:h3.port0
+d[3] <= demux1_4:h4.port0
+
+
+|demux144bit|demux1_4:h1
+LEDR[0] <= LEDR.DB_MAX_OUTPUT_PORT_TYPE
+LEDR[1] <= LEDR.DB_MAX_OUTPUT_PORT_TYPE
+LEDR[2] <= LEDR.DB_MAX_OUTPUT_PORT_TYPE
+LEDR[3] <= LEDR.DB_MAX_OUTPUT_PORT_TYPE
+SW[1] => LEDR.IN0
+SW[1] => LEDR.IN0
+SW[1] => LEDR.IN0
+SW[1] => LEDR.IN0
+SW[2] => LEDR.IN1
+SW[2] => LEDR.IN1
+SW[2] => LEDR.IN1
+SW[2] => LEDR.IN1
+E => LEDR.IN1
+E => LEDR.IN1
+E => LEDR.IN1
+E => LEDR.IN1
+
+
+|demux144bit|demux1_4:h2
+LEDR[0] <= LEDR.DB_MAX_OUTPUT_PORT_TYPE
+LEDR[1] <= LEDR.DB_MAX_OUTPUT_PORT_TYPE
+LEDR[2] <= LEDR.DB_MAX_OUTPUT_PORT_TYPE
+LEDR[3] <= LEDR.DB_MAX_OUTPUT_PORT_TYPE
+SW[1] => LEDR.IN0
+SW[1] => LEDR.IN0
+SW[1] => LEDR.IN0
+SW[1] => LEDR.IN0
+SW[2] => LEDR.IN1
+SW[2] => LEDR.IN1
+SW[2] => LEDR.IN1
+SW[2] => LEDR.IN1
+E => LEDR.IN1
+E => LEDR.IN1
+E => LEDR.IN1
+E => LEDR.IN1
+
+
+|demux144bit|demux1_4:h3
+LEDR[0] <= LEDR.DB_MAX_OUTPUT_PORT_TYPE
+LEDR[1] <= LEDR.DB_MAX_OUTPUT_PORT_TYPE
+LEDR[2] <= LEDR.DB_MAX_OUTPUT_PORT_TYPE
+LEDR[3] <= LEDR.DB_MAX_OUTPUT_PORT_TYPE
+SW[1] => LEDR.IN0
+SW[1] => LEDR.IN0
+SW[1] => LEDR.IN0
+SW[1] => LEDR.IN0
+SW[2] => LEDR.IN1
+SW[2] => LEDR.IN1
+SW[2] => LEDR.IN1
+SW[2] => LEDR.IN1
+E => LEDR.IN1
+E => LEDR.IN1
+E => LEDR.IN1
+E => LEDR.IN1
+
+
+|demux144bit|demux1_4:h4
+LEDR[0] <= LEDR.DB_MAX_OUTPUT_PORT_TYPE
+LEDR[1] <= LEDR.DB_MAX_OUTPUT_PORT_TYPE
+LEDR[2] <= LEDR.DB_MAX_OUTPUT_PORT_TYPE
+LEDR[3] <= LEDR.DB_MAX_OUTPUT_PORT_TYPE
+SW[1] => LEDR.IN0
+SW[1] => LEDR.IN0
+SW[1] => LEDR.IN0
+SW[1] => LEDR.IN0
+SW[2] => LEDR.IN1
+SW[2] => LEDR.IN1
+SW[2] => LEDR.IN1
+SW[2] => LEDR.IN1
+E => LEDR.IN1
+E => LEDR.IN1
+E => LEDR.IN1
+E => LEDR.IN1
+
+

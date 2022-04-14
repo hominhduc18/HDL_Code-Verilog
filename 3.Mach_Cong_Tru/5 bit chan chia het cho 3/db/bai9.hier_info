@@ -1,0 +1,15 @@
+|bai9
+A => ~NO_FANOUT~
+B => Y.IN0
+B => Y.IN0
+C => Y.IN0
+C => Y.IN1
+d => Y.IN1
+d => Y.IN0
+d => Y.IN1
+E => Y.IN1
+E => Y.IN1
+E => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+

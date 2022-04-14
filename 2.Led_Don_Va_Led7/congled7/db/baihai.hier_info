@@ -1,0 +1,138 @@
+|baihai
+a[0] => a[0].IN1
+a[1] => a[1].IN1
+a[2] => a[2].IN1
+a[3] => a[3].IN1
+a[4] => a[4].IN1
+a[5] => a[5].IN1
+b[0] => b[0].IN1
+b[1] => b[1].IN1
+b[2] => b[2].IN1
+b[3] => b[3].IN1
+b[4] => b[4].IN1
+b[5] => b[5].IN1
+hex0[0] <= giama:H1.port1
+hex0[1] <= giama:H1.port1
+hex0[2] <= giama:H1.port1
+hex0[3] <= giama:H1.port1
+hex0[4] <= giama:H1.port1
+hex0[5] <= giama:H1.port1
+hex0[6] <= giama:H1.port1
+hex1[0] <= giama:H2.port1
+hex1[1] <= giama:H2.port1
+hex1[2] <= giama:H2.port1
+hex1[3] <= giama:H2.port1
+hex1[4] <= giama:H2.port1
+hex1[5] <= giama:H2.port1
+hex1[6] <= giama:H2.port1
+hex2[0] <= giama:H3.port1
+hex2[1] <= giama:H3.port1
+hex2[2] <= giama:H3.port1
+hex2[3] <= giama:H3.port1
+hex2[4] <= giama:H3.port1
+hex2[5] <= giama:H3.port1
+hex2[6] <= giama:H3.port1
+
+
+|baihai|fa:HH1
+a => n1.IN0
+b => n1.IN1
+b => n3.IN1
+ci => comb.IN1
+ci => n4.IN1
+s <= comb.DB_MAX_OUTPUT_PORT_TYPE
+co <= comb.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|baihai|fa:HH2
+a => n1.IN0
+b => n1.IN1
+b => n3.IN1
+ci => comb.IN1
+ci => n4.IN1
+s <= comb.DB_MAX_OUTPUT_PORT_TYPE
+co <= comb.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|baihai|fa:HH3
+a => n1.IN0
+b => n1.IN1
+b => n3.IN1
+ci => comb.IN1
+ci => n4.IN1
+s <= comb.DB_MAX_OUTPUT_PORT_TYPE
+co <= comb.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|baihai|fa:HH4
+a => n1.IN0
+b => n1.IN1
+b => n3.IN1
+ci => comb.IN1
+ci => n4.IN1
+s <= comb.DB_MAX_OUTPUT_PORT_TYPE
+co <= comb.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|baihai|fa:HH5
+a => n1.IN0
+b => n1.IN1
+b => n3.IN1
+ci => comb.IN1
+ci => n4.IN1
+s <= comb.DB_MAX_OUTPUT_PORT_TYPE
+co <= comb.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|baihai|fa:HH6
+a => n1.IN0
+b => n1.IN1
+b => n3.IN1
+ci => comb.IN1
+ci => n4.IN1
+s <= comb.DB_MAX_OUTPUT_PORT_TYPE
+co <= comb.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|baihai|giama:H1
+d[0] => Decoder0.IN3
+d[1] => Decoder0.IN2
+d[2] => Decoder0.IN1
+d[3] => Decoder0.IN0
+hex[0] <= WideOr6.DB_MAX_OUTPUT_PORT_TYPE
+hex[1] <= WideOr5.DB_MAX_OUTPUT_PORT_TYPE
+hex[2] <= WideOr4.DB_MAX_OUTPUT_PORT_TYPE
+hex[3] <= WideOr3.DB_MAX_OUTPUT_PORT_TYPE
+hex[4] <= WideOr2.DB_MAX_OUTPUT_PORT_TYPE
+hex[5] <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
+hex[6] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|baihai|giama:H2
+d[0] => Decoder0.IN3
+d[1] => Decoder0.IN2
+d[2] => Decoder0.IN1
+d[3] => Decoder0.IN0
+hex[0] <= WideOr6.DB_MAX_OUTPUT_PORT_TYPE
+hex[1] <= WideOr5.DB_MAX_OUTPUT_PORT_TYPE
+hex[2] <= WideOr4.DB_MAX_OUTPUT_PORT_TYPE
+hex[3] <= WideOr3.DB_MAX_OUTPUT_PORT_TYPE
+hex[4] <= WideOr2.DB_MAX_OUTPUT_PORT_TYPE
+hex[5] <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
+hex[6] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|baihai|giama:H3
+d[0] => Decoder0.IN3
+d[1] => Decoder0.IN2
+d[2] => Decoder0.IN1
+d[3] => Decoder0.IN0
+hex[0] <= WideOr6.DB_MAX_OUTPUT_PORT_TYPE
+hex[1] <= WideOr5.DB_MAX_OUTPUT_PORT_TYPE
+hex[2] <= WideOr4.DB_MAX_OUTPUT_PORT_TYPE
+hex[3] <= WideOr3.DB_MAX_OUTPUT_PORT_TYPE
+hex[4] <= WideOr2.DB_MAX_OUTPUT_PORT_TYPE
+hex[5] <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
+hex[6] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+
+

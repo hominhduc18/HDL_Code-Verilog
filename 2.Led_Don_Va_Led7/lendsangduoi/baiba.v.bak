@@ -1,0 +1,17 @@
+module delay_1s(CLOCK_50,LED,A);
+input A;
+input CLOCK_50;
+output [7:0]LED;
+integer q;
+reg [3:0]LED;
+reg clock_1s=1'b0;
+always @(posedge CLOCK_50)
+begin
+q=q+1;
+if(q==50000000)
+begin
+clock_1s=~clock_1s;
+q=0;
+end
+end
+endmodule 

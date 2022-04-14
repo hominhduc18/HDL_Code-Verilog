@@ -1,0 +1,14 @@
+Analysis & Synthesis Status : Successful - Fri Jan 14 23:59:24 2022
+Quartus II 64-Bit Version : 13.0.0 Build 156 04/24/2013 SJ Web Edition
+Revision Name : baiba
+Top-level Entity Name : baiba
+Family : Cyclone II
+Total logic elements : 10
+    Total combinational functions : 10
+    Dedicated logic registers : 8
+Total registers : 8
+Total pins : 10
+Total virtual pins : 0
+Total memory bits : 0
+Embedded Multiplier 9-bit elements : 0
+Total PLLs : 0

@@ -1,0 +1,11 @@
+vendor_name = ModelSim
+source_file = 1, E:/HDL/5 bit chan chia het cho 3/bai9.v
+source_file = 1, E:/HDL/5 bit chan chia het cho 3/db/bai9.cbx.xml
+design_name = bai9
+instance = comp, \d~I\, d, bai9, 1
+instance = comp, \E~I\, E, bai9, 1
+instance = comp, \B~I\, B, bai9, 1
+instance = comp, \C~I\, C, bai9, 1
+instance = comp, \Y~0\, Y~0, bai9, 1
+instance = comp, \A~I\, A, bai9, 1
+instance = comp, \Y~I\, Y, bai9, 1

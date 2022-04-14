@@ -1,0 +1,17 @@
+|chuhello
+SW[0] => Decoder1.IN2
+SW[0] => Decoder2.IN1
+SW[1] => Decoder0.IN1
+SW[1] => Decoder1.IN1
+SW[1] => Decoder2.IN0
+SW[2] => Decoder0.IN0
+SW[2] => Decoder1.IN0
+HEX0[0] <= HEX0.DB_MAX_OUTPUT_PORT_TYPE
+HEX0[1] <= Decoder2.DB_MAX_OUTPUT_PORT_TYPE
+HEX0[2] <= Decoder2.DB_MAX_OUTPUT_PORT_TYPE
+HEX0[3] <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
+HEX0[4] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+HEX0[5] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+HEX0[6] <= Decoder0.DB_MAX_OUTPUT_PORT_TYPE
+
+

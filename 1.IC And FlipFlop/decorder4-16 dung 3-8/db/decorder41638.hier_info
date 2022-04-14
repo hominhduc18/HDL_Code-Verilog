@@ -1,0 +1,99 @@
+|decorder41638
+in[0] => in[0].IN2
+in[1] => in[1].IN2
+in[2] => in[2].IN2
+in[3] => in[3].IN1
+out[0] <= decorder3_8:u1.port0
+out[1] <= decorder3_8:u1.port0
+out[2] <= decorder3_8:u1.port0
+out[3] <= decorder3_8:u1.port0
+out[4] <= decorder3_8:u1.port0
+out[5] <= decorder3_8:u1.port0
+out[6] <= decorder3_8:u1.port0
+out[7] <= decorder3_8:u1.port0
+out[8] <= decorder3_8:u2.port0
+out[9] <= decorder3_8:u2.port0
+out[10] <= decorder3_8:u2.port0
+out[11] <= decorder3_8:u2.port0
+out[12] <= decorder3_8:u2.port0
+out[13] <= decorder3_8:u2.port0
+out[14] <= decorder3_8:u2.port0
+out[15] <= decorder3_8:u2.port0
+
+
+|decorder41638|decorder3_8:u1
+i[0] => Decoder0.IN2
+i[1] => Decoder0.IN1
+i[2] => Decoder0.IN0
+o[0] <= o[0]$latch.DB_MAX_OUTPUT_PORT_TYPE
+o[1] <= o[1]$latch.DB_MAX_OUTPUT_PORT_TYPE
+o[2] <= o[2]$latch.DB_MAX_OUTPUT_PORT_TYPE
+o[3] <= o[3]$latch.DB_MAX_OUTPUT_PORT_TYPE
+o[4] <= o[4]$latch.DB_MAX_OUTPUT_PORT_TYPE
+o[5] <= o[5]$latch.DB_MAX_OUTPUT_PORT_TYPE
+o[6] <= o[6]$latch.DB_MAX_OUTPUT_PORT_TYPE
+o[7] <= o[7]$latch.DB_MAX_OUTPUT_PORT_TYPE
+e => comb.IN1
+e => comb.IN1
+e => comb.IN1
+e => comb.IN1
+e => comb.IN1
+e => comb.IN1
+e => comb.IN1
+e => comb.IN1
+e => o[0].IN1
+e => o[1].IN1
+e => o[2].IN1
+e => o[3].IN1
+e => o[4].IN1
+e => o[5].IN1
+e => o[6].IN1
+e => o[7].IN1
+e => comb.IN1
+e => comb.IN1
+e => comb.IN1
+e => comb.IN1
+e => comb.IN1
+e => comb.IN1
+e => comb.IN1
+e => comb.IN1
+
+
+|decorder41638|decorder3_8:u2
+i[0] => Decoder0.IN2
+i[1] => Decoder0.IN1
+i[2] => Decoder0.IN0
+o[0] <= o[0]$latch.DB_MAX_OUTPUT_PORT_TYPE
+o[1] <= o[1]$latch.DB_MAX_OUTPUT_PORT_TYPE
+o[2] <= o[2]$latch.DB_MAX_OUTPUT_PORT_TYPE
+o[3] <= o[3]$latch.DB_MAX_OUTPUT_PORT_TYPE
+o[4] <= o[4]$latch.DB_MAX_OUTPUT_PORT_TYPE
+o[5] <= o[5]$latch.DB_MAX_OUTPUT_PORT_TYPE
+o[6] <= o[6]$latch.DB_MAX_OUTPUT_PORT_TYPE
+o[7] <= o[7]$latch.DB_MAX_OUTPUT_PORT_TYPE
+e => comb.IN1
+e => comb.IN1
+e => comb.IN1
+e => comb.IN1
+e => comb.IN1
+e => comb.IN1
+e => comb.IN1
+e => comb.IN1
+e => o[0].IN1
+e => o[1].IN1
+e => o[2].IN1
+e => o[3].IN1
+e => o[4].IN1
+e => o[5].IN1
+e => o[6].IN1
+e => o[7].IN1
+e => comb.IN1
+e => comb.IN1
+e => comb.IN1
+e => comb.IN1
+e => comb.IN1
+e => comb.IN1
+e => comb.IN1
+e => comb.IN1
+
+

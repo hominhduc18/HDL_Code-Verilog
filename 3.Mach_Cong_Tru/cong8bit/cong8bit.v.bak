@@ -1,0 +1,26 @@
+module cong8bit(a,b,hex0,hex1,hex2); 
+input [7:0]a,b; 
+output [8:0]hex0,hex1,hex2;
+wire [4:0]o; 
+wire [6:0]s;
+fa H1 (a[0],b[0],1'b0,s[0],o[0]); 
+fa H2 (a[1],b[1],o[0],s[1],o[1]); 
+fa H3 (a[2],b[2],o[1],s[2],o[2]);
+fa H4 (a[3],b[3],o[2],s[3],o[3]); 
+fa H5 (a[4],b[4],o[3],s[4],o[4]); 
+fa H6 (a[5],b[5],o[4],s[5],s[6]);
+
+
+
+endmodule 
+module fa(a,b,ci,s,co); 
+input a,b,ci; 
+output co,s; 
+wire n1,n2,n3,n4; 
+xor (n1,a,b); 
+xor (s,ci,n1); 
+not (n2,n1); 
+and (n3,n2,b); 
+and (n4,ci,n1); 
+or (co,n3,n4); 
+endmodule

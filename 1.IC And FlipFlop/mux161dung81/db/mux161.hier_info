@@ -1,0 +1,62 @@
+|mux161
+S0 => S0.IN2
+S1 => S1.IN2
+S2 => S2.IN2
+S3 => S3.IN1
+I[0] => I[0].IN1
+I[1] => I[1].IN1
+I[2] => I[2].IN1
+I[3] => I[3].IN1
+I[4] => I[4].IN1
+I[5] => I[5].IN1
+I[6] => I[6].IN1
+I[7] => I[7].IN1
+I[8] => I[8].IN1
+I[9] => I[9].IN1
+I[10] => I[10].IN1
+I[11] => I[11].IN1
+I[12] => I[12].IN1
+I[13] => I[13].IN1
+I[14] => I[14].IN1
+I[15] => I[15].IN1
+Y <= mux2_1:H3.port3
+
+
+|mux161|mux8to1:H1
+a => ~NO_FANOUT~
+b => ~NO_FANOUT~
+c => ~NO_FANOUT~
+i[0] => ~NO_FANOUT~
+i[1] => ~NO_FANOUT~
+i[2] => ~NO_FANOUT~
+i[3] => ~NO_FANOUT~
+i[4] => ~NO_FANOUT~
+i[5] => ~NO_FANOUT~
+i[6] => ~NO_FANOUT~
+i[7] => ~NO_FANOUT~
+y <= <GND>
+
+
+|mux161|mux8to1:H2
+a => ~NO_FANOUT~
+b => ~NO_FANOUT~
+c => ~NO_FANOUT~
+i[0] => ~NO_FANOUT~
+i[1] => ~NO_FANOUT~
+i[2] => ~NO_FANOUT~
+i[3] => ~NO_FANOUT~
+i[4] => ~NO_FANOUT~
+i[5] => ~NO_FANOUT~
+i[6] => ~NO_FANOUT~
+i[7] => ~NO_FANOUT~
+y <= <GND>
+
+
+|mux161|mux2_1:H3
+AA => YY.IN0
+BB => YY.IN0
+SS => YY.IN1
+SS => YY.IN1
+YY <= YY.DB_MAX_OUTPUT_PORT_TYPE
+
+

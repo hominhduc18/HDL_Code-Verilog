@@ -1,0 +1,5 @@
+set tool_name "ModelSim-Altera (VHDL)"
+set corner_file_list {
+	{{"Slow Model"} {decorder41638.vho decorder41638_vhd.sdo}}
+	{{"Fast Model"} {decorder41638_fast.vho decorder41638_vhd_fast.sdo}}
+}

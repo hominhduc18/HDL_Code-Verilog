@@ -1,0 +1,54 @@
+module bai6(rs,ck,hex);
+input ck,rs;
+output reg [6:0]hex0,hex1,hex2,hex3;
+parameter s0 = 3'b000;
+parameter s1 = 3'b001;
+parameter s2 = 3'b010;
+parameter s3 = 3'b011;
+reg [2:0]current_state, next_state;
+///
+always @(*)
+begin 
+case (current_state)
+s0:next_state=s1;
+s1:next_state=s2;
+s2:next_state=s3;
+s3:next_state=s0;
+default next_state=0;
+endcase
+end
+///
+always @(posedge ck or posedge rs)
+begin
+if(rs==1) current_state <=s3;
+else current_state <=next_state;
+end
+//giai ma
+always @(*)
+begin 
+case (current_state)
+s0:hex0=7'b0000000;
+s1:hex1=7'b0001000;
+s2:hex2=7'b0000000;
+s3:hex3=7'b0011001;
+endcase
+end
+module TB_bai6();
+reg ck,rs;
+wire [6:0]hex0,hex1,hex2,hex3;
+initial
+begin 
+ck=0;
+rs=1;
+#1000
+ck=1;
+rs=1;
+#200
+rs=0;
+ck=1;
+#3000 $finish;
+end
+always @(ck)
+#100 ck<=~ck;
+bai6 D(.rs(rs),.ck(ck),.hex0(hex0),.hex1(hex1),.hex2(hex2),.hex3(hex3));
+endmodule

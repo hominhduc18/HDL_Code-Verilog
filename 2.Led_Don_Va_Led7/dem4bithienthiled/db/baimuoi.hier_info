@@ -1,0 +1,59 @@
+|baimuoi
+CK => CK.IN1
+RS => RS.IN1
+HEX00[0] <= giaima:H2.port1
+HEX00[1] <= giaima:H2.port1
+HEX00[2] <= giaima:H2.port1
+HEX00[3] <= giaima:H2.port1
+HEX00[4] <= giaima:H2.port1
+HEX00[5] <= giaima:H2.port1
+HEX00[6] <= giaima:H2.port1
+HEX00[7] <= giaima:H2.port1
+HEX11[0] <= giaima:H2.port2
+HEX11[1] <= giaima:H2.port2
+HEX11[2] <= giaima:H2.port2
+HEX11[3] <= giaima:H2.port2
+HEX11[4] <= giaima:H2.port2
+HEX11[5] <= giaima:H2.port2
+HEX11[6] <= giaima:H2.port2
+HEX11[7] <= giaima:H2.port2
+
+
+|baimuoi|dem4bit:H1
+ck => q[0]~reg0.CLK
+ck => q[1]~reg0.CLK
+ck => q[2]~reg0.CLK
+ck => q[3]~reg0.CLK
+rs => q[0]~reg0.ACLR
+rs => q[1]~reg0.ACLR
+rs => q[2]~reg0.ACLR
+rs => q[3]~reg0.ACLR
+q[0] <= q[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+q[1] <= q[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+q[2] <= q[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+q[3] <= q[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|baimuoi|giaima:H2
+a[0] => Decoder0.IN3
+a[1] => Decoder0.IN2
+a[2] => Decoder0.IN1
+a[3] => Decoder0.IN0
+hex0[0] <= WideOr5.DB_MAX_OUTPUT_PORT_TYPE
+hex0[1] <= WideOr4.DB_MAX_OUTPUT_PORT_TYPE
+hex0[2] <= hex0.DB_MAX_OUTPUT_PORT_TYPE
+hex0[3] <= WideOr3.DB_MAX_OUTPUT_PORT_TYPE
+hex0[4] <= WideOr2.DB_MAX_OUTPUT_PORT_TYPE
+hex0[5] <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
+hex0[6] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+hex0[7] <= <VCC>
+hex1[0] <= WideOr6.DB_MAX_OUTPUT_PORT_TYPE
+hex1[1] <= <VCC>
+hex1[2] <= WideOr6.DB_MAX_OUTPUT_PORT_TYPE
+hex1[3] <= <VCC>
+hex1[4] <= WideOr6.DB_MAX_OUTPUT_PORT_TYPE
+hex1[5] <= WideOr6.DB_MAX_OUTPUT_PORT_TYPE
+hex1[6] <= WideOr6.DB_MAX_OUTPUT_PORT_TYPE
+hex1[7] <= <VCC>
+
+

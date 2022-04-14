@@ -1,0 +1,15 @@
+module bai10(A,Y);
+input [4:0]A;
+output Y;
+reg Y;
+genvar i;
+always @(*)
+begin 
+for(i=2;i<=31;i=i+1)
+if(A%i==0 && A<2)
+Y=1'b1;
+else
+Y=1'b0;
+end
+endmodule
+

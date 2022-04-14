@@ -1,0 +1,22 @@
+
+State Machine - |bai9|curent
+Name curent.statestop curent.state18 curent.state17 curent.state16 curent.state15 curent.state14 curent.state13 curent.state12 curent.state11 curent.state10 curent.state9 curent.state8 curent.state7 curent.state6 curent.state5 curent.state4 curent.state3 curent.state2 curent.state1 
+curent.state1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+curent.state2 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 1 
+curent.state3 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 1 
+curent.state4 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 1 
+curent.state5 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 1 
+curent.state6 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 1 
+curent.state7 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 1 
+curent.state8 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 1 
+curent.state9 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 1 
+curent.state10 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 1 
+curent.state11 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 1 
+curent.state12 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 1 
+curent.state13 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 1 
+curent.state14 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 1 
+curent.state15 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+curent.state16 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+curent.state17 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+curent.state18 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+curent.statestop 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 

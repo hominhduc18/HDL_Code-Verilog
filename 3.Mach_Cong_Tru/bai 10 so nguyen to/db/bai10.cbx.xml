@@ -1,0 +1,6 @@
+<?xml version="1.0" ?>
+<LOG_ROOT>
+	<PROJECT NAME="bai10">
+		<CBX_INST_ENTRY INSTANCE_NAME="|bai10|lpm_divide:Mod0" CBX_FILE_NAME="lpm_divide_v4m.tdf"/>
+	</PROJECT>
+</LOG_ROOT>

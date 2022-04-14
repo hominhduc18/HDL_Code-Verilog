@@ -1,0 +1,18 @@
+|baimot
+ck => a[0]~reg0.CLK
+ck => a[1]~reg0.CLK
+ck => a[2]~reg0.CLK
+ck => a[3]~reg0.CLK
+ck => a[4]~reg0.CLK
+rs => a[0]~reg0.ACLR
+rs => a[1]~reg0.ACLR
+rs => a[2]~reg0.ACLR
+rs => a[3]~reg0.PRESET
+rs => a[4]~reg0.PRESET
+a[0] <= a[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+a[1] <= a[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+a[2] <= a[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+a[3] <= a[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+a[4] <= a[4]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+

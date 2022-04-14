@@ -1,0 +1,44 @@
+|bai7trang23
+s[0] => s[0].IN2
+s[1] => s[1].IN1
+s[2] => s[2].IN1
+a[0] => a[0].IN1
+a[1] => a[1].IN1
+a[2] => a[2].IN1
+a[3] => a[3].IN1
+a[4] => a[4].IN1
+y <= mux2_1:H4.port3
+
+
+|bai7trang23|mux2_1:H1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+A => Y.IN0
+B => Y.IN0
+S => Y.IN1
+S => Y.IN1
+
+
+|bai7trang23|mux2_1:H2
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+A => Y.IN0
+B => Y.IN0
+S => Y.IN1
+S => Y.IN1
+
+
+|bai7trang23|mux2_1:H3
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+A => Y.IN0
+B => Y.IN0
+S => Y.IN1
+S => Y.IN1
+
+
+|bai7trang23|mux2_1:H4
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+A => Y.IN0
+B => Y.IN0
+S => Y.IN1
+S => Y.IN1
+
+

@@ -1,0 +1,28 @@
+module IC74LS151(e,s,i,y);
+input e;
+input [2:0]s;
+input [7:0]i;
+output y1,y2;
+reg [1:0]y;
+always @(*)
+begin
+if(e==1'b1)
+	begin
+		case(s)
+		3'b000:i[0]=1'b1;
+		3'b001:i[1]=1'b1;
+		3'b010:i[2]=1'b1;
+		3'b011:i[3]=1'b1;
+		3'b100:i[4]=1'b1;
+		3'b101:i[5]=1'b1;
+		3'b110:i[6]=1'b1;
+		3'b111:i[7]=1'b1;
+		endcase
+	end
+else
+y1=1'b0;
+end
+assign y2=~y1;
+endmodule
+
+

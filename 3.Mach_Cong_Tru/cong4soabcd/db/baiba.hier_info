@@ -1,0 +1,462 @@
+|baiba
+A[0] => A[0].IN1
+A[1] => A[1].IN1
+A[2] => A[2].IN1
+A[3] => A[3].IN1
+B[0] => B[0].IN1
+B[1] => B[1].IN1
+B[2] => B[2].IN1
+B[3] => B[3].IN1
+C[0] => C[0].IN1
+C[1] => C[1].IN1
+C[2] => C[2].IN1
+C[3] => C[3].IN1
+D[0] => D[0].IN1
+D[1] => D[1].IN1
+D[2] => D[2].IN1
+D[3] => D[3].IN1
+Y[0] <= cong8bit:congn.port2
+Y[1] <= cong8bit:congn.port2
+Y[2] <= cong8bit:congn.port2
+Y[3] <= cong8bit:congn.port2
+Y[4] <= cong8bit:congn.port2
+Y[5] <= cong8bit:congn.port2
+Y[6] <= cong8bit:congn.port2
+Y[7] <= cong8bit:congn.port2
+Y[8] <= cong8bit:congn.port2
+
+
+|baiba|nhan4bitt:axb
+a[0] => p.IN0
+a[0] => andd.IN0
+a[0] => andd.IN0
+a[0] => andd.IN0
+a[1] => andd.IN0
+a[1] => andd.IN0
+a[1] => andd.IN0
+a[1] => andd.IN0
+a[2] => andd.IN0
+a[2] => andd.IN0
+a[2] => andd.IN0
+a[2] => andd.IN0
+a[3] => andd.IN0
+a[3] => andd.IN0
+a[3] => andd.IN0
+a[3] => andd.IN0
+b[0] => p.IN1
+b[0] => andd.IN1
+b[0] => andd.IN1
+b[0] => andd.IN1
+b[1] => andd.IN1
+b[1] => andd.IN1
+b[1] => andd.IN1
+b[1] => andd.IN1
+b[2] => andd.IN1
+b[2] => andd.IN1
+b[2] => andd.IN1
+b[2] => andd.IN1
+b[3] => andd.IN1
+b[3] => andd.IN1
+b[3] => andd.IN1
+b[3] => andd.IN1
+p[0] <= p.DB_MAX_OUTPUT_PORT_TYPE
+p[1] <= fa:H1.port3
+p[2] <= fa:H5.port3
+p[3] <= fa:H9.port3
+p[4] <= fa:H10.port3
+p[5] <= fa:H11.port3
+p[6] <= fa:H12.port3
+p[7] <= fa:H12.port4
+
+
+|baiba|nhan4bitt:axb|fa:H1
+a1 => n1.IN0
+b1 => n1.IN1
+b1 => n3.IN1
+ci => comb.IN1
+ci => n4.IN1
+s1 <= comb.DB_MAX_OUTPUT_PORT_TYPE
+co <= comb.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|baiba|nhan4bitt:axb|fa:H2
+a1 => n1.IN0
+b1 => n1.IN1
+b1 => n3.IN1
+ci => comb.IN1
+ci => n4.IN1
+s1 <= comb.DB_MAX_OUTPUT_PORT_TYPE
+co <= comb.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|baiba|nhan4bitt:axb|fa:H3
+a1 => n1.IN0
+b1 => n1.IN1
+b1 => n3.IN1
+ci => comb.IN1
+ci => n4.IN1
+s1 <= comb.DB_MAX_OUTPUT_PORT_TYPE
+co <= comb.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|baiba|nhan4bitt:axb|fa:H4
+a1 => n1.IN0
+b1 => n1.IN1
+b1 => n3.IN1
+ci => comb.IN1
+ci => n4.IN1
+s1 <= comb.DB_MAX_OUTPUT_PORT_TYPE
+co <= comb.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|baiba|nhan4bitt:axb|fa:H5
+a1 => n1.IN0
+b1 => n1.IN1
+b1 => n3.IN1
+ci => comb.IN1
+ci => n4.IN1
+s1 <= comb.DB_MAX_OUTPUT_PORT_TYPE
+co <= comb.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|baiba|nhan4bitt:axb|fa:H6
+a1 => n1.IN0
+b1 => n1.IN1
+b1 => n3.IN1
+ci => comb.IN1
+ci => n4.IN1
+s1 <= comb.DB_MAX_OUTPUT_PORT_TYPE
+co <= comb.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|baiba|nhan4bitt:axb|fa:H7
+a1 => n1.IN0
+b1 => n1.IN1
+b1 => n3.IN1
+ci => comb.IN1
+ci => n4.IN1
+s1 <= comb.DB_MAX_OUTPUT_PORT_TYPE
+co <= comb.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|baiba|nhan4bitt:axb|fa:H8
+a1 => n1.IN0
+b1 => n1.IN1
+b1 => n3.IN1
+ci => comb.IN1
+ci => n4.IN1
+s1 <= comb.DB_MAX_OUTPUT_PORT_TYPE
+co <= comb.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|baiba|nhan4bitt:axb|fa:H9
+a1 => n1.IN0
+b1 => n1.IN1
+b1 => n3.IN1
+ci => comb.IN1
+ci => n4.IN1
+s1 <= comb.DB_MAX_OUTPUT_PORT_TYPE
+co <= comb.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|baiba|nhan4bitt:axb|fa:H10
+a1 => n1.IN0
+b1 => n1.IN1
+b1 => n3.IN1
+ci => comb.IN1
+ci => n4.IN1
+s1 <= comb.DB_MAX_OUTPUT_PORT_TYPE
+co <= comb.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|baiba|nhan4bitt:axb|fa:H11
+a1 => n1.IN0
+b1 => n1.IN1
+b1 => n3.IN1
+ci => comb.IN1
+ci => n4.IN1
+s1 <= comb.DB_MAX_OUTPUT_PORT_TYPE
+co <= comb.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|baiba|nhan4bitt:axb|fa:H12
+a1 => n1.IN0
+b1 => n1.IN1
+b1 => n3.IN1
+ci => comb.IN1
+ci => n4.IN1
+s1 <= comb.DB_MAX_OUTPUT_PORT_TYPE
+co <= comb.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|baiba|nhan4bitt:cxd
+a[0] => p.IN0
+a[0] => andd.IN0
+a[0] => andd.IN0
+a[0] => andd.IN0
+a[1] => andd.IN0
+a[1] => andd.IN0
+a[1] => andd.IN0
+a[1] => andd.IN0
+a[2] => andd.IN0
+a[2] => andd.IN0
+a[2] => andd.IN0
+a[2] => andd.IN0
+a[3] => andd.IN0
+a[3] => andd.IN0
+a[3] => andd.IN0
+a[3] => andd.IN0
+b[0] => p.IN1
+b[0] => andd.IN1
+b[0] => andd.IN1
+b[0] => andd.IN1
+b[1] => andd.IN1
+b[1] => andd.IN1
+b[1] => andd.IN1
+b[1] => andd.IN1
+b[2] => andd.IN1
+b[2] => andd.IN1
+b[2] => andd.IN1
+b[2] => andd.IN1
+b[3] => andd.IN1
+b[3] => andd.IN1
+b[3] => andd.IN1
+b[3] => andd.IN1
+p[0] <= p.DB_MAX_OUTPUT_PORT_TYPE
+p[1] <= fa:H1.port3
+p[2] <= fa:H5.port3
+p[3] <= fa:H9.port3
+p[4] <= fa:H10.port3
+p[5] <= fa:H11.port3
+p[6] <= fa:H12.port3
+p[7] <= fa:H12.port4
+
+
+|baiba|nhan4bitt:cxd|fa:H1
+a1 => n1.IN0
+b1 => n1.IN1
+b1 => n3.IN1
+ci => comb.IN1
+ci => n4.IN1
+s1 <= comb.DB_MAX_OUTPUT_PORT_TYPE
+co <= comb.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|baiba|nhan4bitt:cxd|fa:H2
+a1 => n1.IN0
+b1 => n1.IN1
+b1 => n3.IN1
+ci => comb.IN1
+ci => n4.IN1
+s1 <= comb.DB_MAX_OUTPUT_PORT_TYPE
+co <= comb.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|baiba|nhan4bitt:cxd|fa:H3
+a1 => n1.IN0
+b1 => n1.IN1
+b1 => n3.IN1
+ci => comb.IN1
+ci => n4.IN1
+s1 <= comb.DB_MAX_OUTPUT_PORT_TYPE
+co <= comb.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|baiba|nhan4bitt:cxd|fa:H4
+a1 => n1.IN0
+b1 => n1.IN1
+b1 => n3.IN1
+ci => comb.IN1
+ci => n4.IN1
+s1 <= comb.DB_MAX_OUTPUT_PORT_TYPE
+co <= comb.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|baiba|nhan4bitt:cxd|fa:H5
+a1 => n1.IN0
+b1 => n1.IN1
+b1 => n3.IN1
+ci => comb.IN1
+ci => n4.IN1
+s1 <= comb.DB_MAX_OUTPUT_PORT_TYPE
+co <= comb.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|baiba|nhan4bitt:cxd|fa:H6
+a1 => n1.IN0
+b1 => n1.IN1
+b1 => n3.IN1
+ci => comb.IN1
+ci => n4.IN1
+s1 <= comb.DB_MAX_OUTPUT_PORT_TYPE
+co <= comb.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|baiba|nhan4bitt:cxd|fa:H7
+a1 => n1.IN0
+b1 => n1.IN1
+b1 => n3.IN1
+ci => comb.IN1
+ci => n4.IN1
+s1 <= comb.DB_MAX_OUTPUT_PORT_TYPE
+co <= comb.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|baiba|nhan4bitt:cxd|fa:H8
+a1 => n1.IN0
+b1 => n1.IN1
+b1 => n3.IN1
+ci => comb.IN1
+ci => n4.IN1
+s1 <= comb.DB_MAX_OUTPUT_PORT_TYPE
+co <= comb.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|baiba|nhan4bitt:cxd|fa:H9
+a1 => n1.IN0
+b1 => n1.IN1
+b1 => n3.IN1
+ci => comb.IN1
+ci => n4.IN1
+s1 <= comb.DB_MAX_OUTPUT_PORT_TYPE
+co <= comb.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|baiba|nhan4bitt:cxd|fa:H10
+a1 => n1.IN0
+b1 => n1.IN1
+b1 => n3.IN1
+ci => comb.IN1
+ci => n4.IN1
+s1 <= comb.DB_MAX_OUTPUT_PORT_TYPE
+co <= comb.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|baiba|nhan4bitt:cxd|fa:H11
+a1 => n1.IN0
+b1 => n1.IN1
+b1 => n3.IN1
+ci => comb.IN1
+ci => n4.IN1
+s1 <= comb.DB_MAX_OUTPUT_PORT_TYPE
+co <= comb.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|baiba|nhan4bitt:cxd|fa:H12
+a1 => n1.IN0
+b1 => n1.IN1
+b1 => n3.IN1
+ci => comb.IN1
+ci => n4.IN1
+s1 <= comb.DB_MAX_OUTPUT_PORT_TYPE
+co <= comb.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|baiba|cong8bit:congn
+aa[0] => aa[0].IN1
+aa[1] => aa[1].IN1
+aa[2] => aa[2].IN1
+aa[3] => aa[3].IN1
+aa[4] => aa[4].IN1
+aa[5] => aa[5].IN1
+aa[6] => aa[6].IN1
+aa[7] => aa[7].IN1
+bb[0] => bb[0].IN1
+bb[1] => bb[1].IN1
+bb[2] => bb[2].IN1
+bb[3] => bb[3].IN1
+bb[4] => bb[4].IN1
+bb[5] => bb[5].IN1
+bb[6] => bb[6].IN1
+bb[7] => bb[7].IN1
+ss[0] <= fa:B0.port4
+ss[1] <= fa:B1.port3
+ss[2] <= fa:B2.port3
+ss[3] <= fa:B3.port3
+ss[4] <= fa:B4.port3
+ss[5] <= fa:B5.port3
+ss[6] <= fa:B6.port3
+ss[7] <= fa:B7.port3
+ss[8] <= fa:B7.port4
+
+
+|baiba|cong8bit:congn|fa:B0
+a1 => n1.IN0
+b1 => n1.IN1
+b1 => n3.IN1
+ci => comb.IN1
+ci => n4.IN1
+s1 <= comb.DB_MAX_OUTPUT_PORT_TYPE
+co <= comb.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|baiba|cong8bit:congn|fa:B1
+a1 => n1.IN0
+b1 => n1.IN1
+b1 => n3.IN1
+ci => comb.IN1
+ci => n4.IN1
+s1 <= comb.DB_MAX_OUTPUT_PORT_TYPE
+co <= comb.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|baiba|cong8bit:congn|fa:B2
+a1 => n1.IN0
+b1 => n1.IN1
+b1 => n3.IN1
+ci => comb.IN1
+ci => n4.IN1
+s1 <= comb.DB_MAX_OUTPUT_PORT_TYPE
+co <= comb.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|baiba|cong8bit:congn|fa:B3
+a1 => n1.IN0
+b1 => n1.IN1
+b1 => n3.IN1
+ci => comb.IN1
+ci => n4.IN1
+s1 <= comb.DB_MAX_OUTPUT_PORT_TYPE
+co <= comb.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|baiba|cong8bit:congn|fa:B4
+a1 => n1.IN0
+b1 => n1.IN1
+b1 => n3.IN1
+ci => comb.IN1
+ci => n4.IN1
+s1 <= comb.DB_MAX_OUTPUT_PORT_TYPE
+co <= comb.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|baiba|cong8bit:congn|fa:B5
+a1 => n1.IN0
+b1 => n1.IN1
+b1 => n3.IN1
+ci => comb.IN1
+ci => n4.IN1
+s1 <= comb.DB_MAX_OUTPUT_PORT_TYPE
+co <= comb.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|baiba|cong8bit:congn|fa:B6
+a1 => n1.IN0
+b1 => n1.IN1
+b1 => n3.IN1
+ci => comb.IN1
+ci => n4.IN1
+s1 <= comb.DB_MAX_OUTPUT_PORT_TYPE
+co <= comb.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|baiba|cong8bit:congn|fa:B7
+a1 => n1.IN0
+b1 => n1.IN1
+b1 => n3.IN1
+ci => comb.IN1
+ci => n4.IN1
+s1 <= comb.DB_MAX_OUTPUT_PORT_TYPE
+co <= comb.DB_MAX_OUTPUT_PORT_TYPE
+
+

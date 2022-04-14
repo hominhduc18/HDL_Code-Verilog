@@ -1,0 +1,56 @@
+|baimot
+SW[0] => a[0].IN1
+SW[1] => a[1].IN1
+SW[2] => a[2].IN1
+SW[3] => a[3].IN1
+SW[4] => b[0].IN1
+SW[5] => b[1].IN1
+SW[6] => b[2].IN1
+SW[7] => b[3].IN1
+LEDG[0] <= fa:H1.port1
+LEDG[1] <= fa:H2.port1
+LEDG[2] <= fa:H3.port1
+LEDG[3] <= fa:H4.port1
+LEDG[4] <= fa:H4.port0
+
+
+|baimot|fa:H1
+co <= comb.DB_MAX_OUTPUT_PORT_TYPE
+s <= comb.DB_MAX_OUTPUT_PORT_TYPE
+a => n1.IN0
+b => n1.IN1
+b => n3.IN1
+ci => comb.IN1
+ci => n4.IN1
+
+
+|baimot|fa:H2
+co <= comb.DB_MAX_OUTPUT_PORT_TYPE
+s <= comb.DB_MAX_OUTPUT_PORT_TYPE
+a => n1.IN0
+b => n1.IN1
+b => n3.IN1
+ci => comb.IN1
+ci => n4.IN1
+
+
+|baimot|fa:H3
+co <= comb.DB_MAX_OUTPUT_PORT_TYPE
+s <= comb.DB_MAX_OUTPUT_PORT_TYPE
+a => n1.IN0
+b => n1.IN1
+b => n3.IN1
+ci => comb.IN1
+ci => n4.IN1
+
+
+|baimot|fa:H4
+co <= comb.DB_MAX_OUTPUT_PORT_TYPE
+s <= comb.DB_MAX_OUTPUT_PORT_TYPE
+a => n1.IN0
+b => n1.IN1
+b => n3.IN1
+ci => comb.IN1
+ci => n4.IN1
+
+

@@ -1,0 +1,34 @@
+module IC82c19(s,i,e,y);
+input [3:0]s;
+input i;
+input [15:0]e;
+output y;
+reg y;
+always @(*)
+begin
+if(i==1'b0)
+	begin 
+		case(s)
+		4'b0000:y=~e[0];
+		4'b0001:y=~e[1];
+		4'b0010:y=~e[2];
+		4'b0011:y=~e[3];
+		4'b0100:y=~e[4];
+      4'b0101:y=~e[5];
+		4'b0110:y=~e[6];
+		4'b0111:y=~e[7];
+		4'b1000:y=~e[8];
+		4'b1001:y=~e[9];
+		4'b1010:y=~e[10];
+		4'b1011:y=~e[11];
+		4'b1100:y=~e[12];
+		4'b1101:y=~e[13];
+		4'b1110:y=~e[14];
+		4'b1111:y=~e[15];
+		endcase
+	end
+else
+y=1'b0;
+end
+endmodule
+	

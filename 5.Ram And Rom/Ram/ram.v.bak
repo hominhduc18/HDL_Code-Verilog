@@ -1,0 +1,126 @@
+module ram(DataIn, DataOut, Add,CS,WE,clk);
+input [7:0] DataIn;
+output reg [7:0] DataOut;
+input [2:0]Add;
+input CS,WE,clk;
+reg[7:0] SRAM[7:0];
+always@(posedge clk)
+begin
+if (CS==1'b1)
+begin	
+	if (WE == 1'b1)
+		SRAM[Add] <= DataIn;
+		else
+		DataOut <= SRAM[Add];
+		end
+else
+DataOut <= 8'bxxxxxxxx;
+end
+endmodule
+//testbench
+module TB_ram();
+reg CS,WE,clk;
+reg [2:0]Add;
+reg [7:0] DataIn;
+wire [7:0] DataOut;
+initial
+begin
+DataIn = 8'b00000000;
+Add = 3'b000;
+CS = 1'b0;
+WE = 1'b0;
+clk = 1'b0;
+#50
+DataIn = 8'b00000010;
+Add = 3'b000;
+CS = 1'b1;
+WE = 1'b1;
+clk = 1'b1;
+#50
+DataIn = 8'b00000011;
+Add = 3'b001;
+CS = 1'b1;
+WE = 1'b1;
+clk = 1'b1;
+#50
+DataIn = 8'b00000111;
+Add = 3'b010;
+CS = 1'b1;
+WE = 1'b1;
+clk = 1'b1;
+#50
+DataIn = 8'b00001111;
+Add = 3'b011;
+CS = 1'b1;
+WE = 1'b1;
+clk = 1'b1;
+#50
+DataIn = 8'b00011111;
+Add = 3'b100;
+CS = 1'b1;
+WE = 1'b1;
+clk = 1'b1;
+#50
+DataIn = 8'b00111111;
+Add = 3'b101;
+CS = 1'b1;
+WE = 1'b1;
+clk = 1'b1;
+#50
+DataIn = 8'b01111111;
+Add = 3'b110;
+CS = 1'b1;
+WE = 1'b1;
+clk = 1'b1;
+#100
+DataIn = 8'b00000111;
+Add = 3'b000;
+CS = 1'b1;
+WE = 1'b0;
+clk = 1'b1;
+#100
+DataIn = 8'b00001111;
+Add = 3'b001;
+CS = 1'b1;
+WE = 1'b0;
+clk = 1'b1;
+#100
+DataIn = 8'b00011111;
+Add = 3'b010;
+CS = 1'b1;
+WE = 1'b0;
+clk = 1'b1;
+#100
+DataIn = 8'b00111111;
+Add = 3'b011;
+CS = 1'b1;
+WE = 1'b0;
+clk = 1'b1;
+#100
+DataIn = 8'b01100111;
+Add = 3'b100;
+CS = 1'b1;
+WE = 1'b0;
+clk = 1'b1;
+#100
+DataIn = 8'b01111000;
+Add = 3'b000;
+CS = 1'b1;
+WE = 1'b1;
+clk = 1'b1;
+#100
+DataIn = 8'b01111010;
+Add = 3'b101;
+CS = 1'b1;
+WE = 1'b1;
+clk = 1'b1;
+#300
+DataIn = 8'b00000110;
+Add = 3'b001;
+CS = 1'b0;
+WE = 1'b0;
+clk = 1'b1;
+#3500 $finish;
+end
+ram D(.CS(CS),.WE(WE),.clk(clk),.Add(Add),.DataIn(DataIn),.DataOut(DataOut));
+endmodule

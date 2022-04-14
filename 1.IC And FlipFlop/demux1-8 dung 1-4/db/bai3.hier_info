@@ -1,0 +1,45 @@
+|bai3
+s[0] => s[0].IN2
+s[1] => s[1].IN2
+s[2] => s[2].IN1
+s[3] => s[3].IN2
+y[0] <= demux1_4:H1.port3
+y[1] <= demux1_4:H1.port3
+y[2] <= demux1_4:H1.port3
+y[3] <= demux1_4:H1.port3
+y[4] <= demux1_4:H2.port3
+y[5] <= demux1_4:H2.port3
+y[6] <= demux1_4:H2.port3
+y[7] <= demux1_4:H2.port3
+
+
+|bai3|demux1_4:H1
+D => Y.IN0
+E => Y.IN1
+S[0] => Y.IN1
+S[0] => Y.IN1
+S[0] => Y.IN1
+S[0] => Y.IN1
+S[1] => Y.IN1
+S[1] => Y.IN1
+Y[0] <= Y.DB_MAX_OUTPUT_PORT_TYPE
+Y[1] <= Y.DB_MAX_OUTPUT_PORT_TYPE
+Y[2] <= Y.DB_MAX_OUTPUT_PORT_TYPE
+Y[3] <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|bai3|demux1_4:H2
+D => Y.IN0
+E => Y.IN1
+S[0] => Y.IN1
+S[0] => Y.IN1
+S[0] => Y.IN1
+S[0] => Y.IN1
+S[1] => Y.IN1
+S[1] => Y.IN1
+Y[0] <= Y.DB_MAX_OUTPUT_PORT_TYPE
+Y[1] <= Y.DB_MAX_OUTPUT_PORT_TYPE
+Y[2] <= Y.DB_MAX_OUTPUT_PORT_TYPE
+Y[3] <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+

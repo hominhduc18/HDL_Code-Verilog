@@ -1,0 +1,13 @@
+vendor_name = ModelSim
+source_file = 1, E:/HDL/mux51dung21/bai7trang23.v
+source_file = 1, E:/HDL/mux51dung21/db/bai7trang23.cbx.xml
+design_name = bai7trang23
+instance = comp, \s[0]~I\, s[0], bai7trang23, 1
+instance = comp, \s[1]~I\, s[1], bai7trang23, 1
+instance = comp, \s[2]~I\, s[2], bai7trang23, 1
+instance = comp, \a[0]~I\, a[0], bai7trang23, 1
+instance = comp, \a[1]~I\, a[1], bai7trang23, 1
+instance = comp, \a[2]~I\, a[2], bai7trang23, 1
+instance = comp, \a[3]~I\, a[3], bai7trang23, 1
+instance = comp, \a[4]~I\, a[4], bai7trang23, 1
+instance = comp, \y~I\, y, bai7trang23, 1

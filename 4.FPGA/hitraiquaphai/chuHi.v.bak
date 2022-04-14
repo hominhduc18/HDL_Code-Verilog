@@ -1,0 +1,78 @@
+module chuHi(SW,HEX0,HEX1,HEX2,HEX3);
+input [17:15]SW; 
+output reg[7:0]HEX0,HEX1,HEX2,HEX3; 
+always @ (SW) 
+begin 
+case (SW) 
+3'b000:
+ begin 
+// tắt led  
+HEX3 =8'b 11111111; 
+HEX2 =8'b 11111111;  
+HEX1 =8'b 11111111; 
+HEX0 =8'b 11111111; 
+end 
+// chữ HI 
+3'b001: 
+begin  
+HEX3 =8'b 11111111; 
+HEX2 =8'b 11111111;  
+HEX1 =8'b 11111001; 
+HEX0 =8'b 10001001; 
+end 
+
+3'b010: 
+begin   
+HEX3 =8'b 11111111; 
+HEX2 =8'b 11111001;  
+HEX1 =8'b 10001001; 
+HEX0 =8'b 11111111; 
+end 
+
+3'b011: 
+begin 
+ 
+HEX3 =8'b 11111001; 
+HEX2 =8'b 10001001;  
+HEX1 =8'b 11111111; 
+HEX0 =8'b 11111111; 
+end 
+
+3'b100: 
+begin 
+  
+HEX3 =8'b 110001001; 
+HEX2 =8'b 11111111;  
+HEX1 =8'b 11111111; 
+HEX0 =8'b 11111001; 
+end 
+endcase
+end 
+endmodule
+
+
+//testbench
+module TB_happytsp();
+reg [17:15]SW;
+wire[7:0]HEX0,HEX1,HEX2,HEX3;
+initial
+begin
+SW = 3'b000; //OFF
+#100
+SW = 3'b001; 
+#100
+SW = 3'b010; 
+#100
+SW = 3'b011; 
+#100
+SW = 3'b100; 
+#100
+SW = 3'b101; 
+#100
+SW = 3'b110; //OFF
+#100
+SW = 3'b111; // OFF
+#1000 $finish;
+end
+happytsp D(.SW(SW),.HEX0(HEX0),.HEX1(HEX1),.HEX2(HEX2),.HEX3(HEX3));
+endmodule

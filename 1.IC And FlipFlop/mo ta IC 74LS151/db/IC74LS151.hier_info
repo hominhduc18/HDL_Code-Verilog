@@ -1,0 +1,29 @@
+|IC74LS151
+e => y1.OUTPUTSELECT
+e => y2.OUTPUTSELECT
+s[0] => Mux0.IN2
+s[0] => Mux1.IN10
+s[1] => Mux0.IN1
+s[1] => Mux1.IN9
+s[2] => Mux0.IN0
+s[2] => Mux1.IN8
+i[0] => Mux0.IN10
+i[0] => Mux1.IN0
+i[1] => Mux0.IN9
+i[1] => Mux1.IN1
+i[2] => Mux0.IN8
+i[2] => Mux1.IN2
+i[3] => Mux0.IN7
+i[3] => Mux1.IN3
+i[4] => Mux0.IN6
+i[4] => Mux1.IN4
+i[5] => Mux0.IN5
+i[5] => Mux1.IN5
+i[6] => Mux0.IN4
+i[6] => Mux1.IN6
+i[7] => Mux0.IN3
+i[7] => Mux1.IN7
+y1 <= y1.DB_MAX_OUTPUT_PORT_TYPE
+y2 <= y2.DB_MAX_OUTPUT_PORT_TYPE
+
+

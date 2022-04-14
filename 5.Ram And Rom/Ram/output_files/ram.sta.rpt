@@ -1,0 +1,1053 @@
+TimeQuest Timing Analyzer report for ram
+Wed Nov 17 06:45:32 2021
+Quartus II 64-Bit Version 13.0.0 Build 156 04/24/2013 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. TimeQuest Timing Analyzer Summary
+  3. Parallel Compilation
+  4. Clocks
+  5. Slow Model Fmax Summary
+  6. Slow Model Setup Summary
+  7. Slow Model Hold Summary
+  8. Slow Model Recovery Summary
+  9. Slow Model Removal Summary
+ 10. Slow Model Minimum Pulse Width Summary
+ 11. Slow Model Setup: 'Clk'
+ 12. Slow Model Hold: 'Clk'
+ 13. Slow Model Minimum Pulse Width: 'Clk'
+ 14. Setup Times
+ 15. Hold Times
+ 16. Clock to Output Times
+ 17. Minimum Clock to Output Times
+ 18. Fast Model Setup Summary
+ 19. Fast Model Hold Summary
+ 20. Fast Model Recovery Summary
+ 21. Fast Model Removal Summary
+ 22. Fast Model Minimum Pulse Width Summary
+ 23. Fast Model Setup: 'Clk'
+ 24. Fast Model Hold: 'Clk'
+ 25. Fast Model Minimum Pulse Width: 'Clk'
+ 26. Setup Times
+ 27. Hold Times
+ 28. Clock to Output Times
+ 29. Minimum Clock to Output Times
+ 30. Multicorner Timing Analysis Summary
+ 31. Setup Times
+ 32. Hold Times
+ 33. Clock to Output Times
+ 34. Minimum Clock to Output Times
+ 35. Setup Transfers
+ 36. Hold Transfers
+ 37. Report TCCS
+ 38. Report RSKM
+ 39. Unconstrained Paths
+ 40. TimeQuest Timing Analyzer Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2013 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++-------------------------------------------------------------------------+
+; TimeQuest Timing Analyzer Summary                                       ;
++--------------------+----------------------------------------------------+
+; Quartus II Version ; Version 13.0.0 Build 156 04/24/2013 SJ Web Edition ;
+; Revision Name      ; ram                                                ;
+; Device Family      ; Cyclone II                                         ;
+; Device Name        ; EP2C35F672C6                                       ;
+; Timing Models      ; Final                                              ;
+; Delay Model        ; Combined                                           ;
+; Rise/Fall Delays   ; Unavailable                                        ;
++--------------------+----------------------------------------------------+
+
+
+Parallel compilation was disabled, but you have multiple processors available. Enable parallel compilation to reduce compilation time.
++-------------------------------------+
+; Parallel Compilation                ;
++----------------------------+--------+
+; Processors                 ; Number ;
++----------------------------+--------+
+; Number detected on machine ; 8      ;
+; Maximum allowed            ; 1      ;
++----------------------------+--------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Clocks                                                                                                                                                                          ;
++------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+---------+
+; Clock Name ; Type ; Period ; Frequency  ; Rise  ; Fall  ; Duty Cycle ; Divide by ; Multiply by ; Phase ; Offset ; Edge List ; Edge Shift ; Inverted ; Master ; Source ; Targets ;
++------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+---------+
+; Clk        ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { Clk } ;
++------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+---------+
+
+
++-----------------------------------------------------------------------------------------------------------+
+; Slow Model Fmax Summary                                                                                   ;
++------------+-----------------+------------+---------------------------------------------------------------+
+; Fmax       ; Restricted Fmax ; Clock Name ; Note                                                          ;
++------------+-----------------+------------+---------------------------------------------------------------+
+; 421.59 MHz ; 420.17 MHz      ; Clk        ; limit due to minimum period restriction (max I/O toggle rate) ;
++------------+-----------------+------------+---------------------------------------------------------------+
+This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
+
+
++--------------------------------+
+; Slow Model Setup Summary       ;
++-------+--------+---------------+
+; Clock ; Slack  ; End Point TNS ;
++-------+--------+---------------+
+; Clk   ; -1.372 ; -9.574        ;
++-------+--------+---------------+
+
+
++-------------------------------+
+; Slow Model Hold Summary       ;
++-------+-------+---------------+
+; Clock ; Slack ; End Point TNS ;
++-------+-------+---------------+
+; Clk   ; 0.910 ; 0.000         ;
++-------+-------+---------------+
+
+
+-------------------------------
+; Slow Model Recovery Summary ;
+-------------------------------
+No paths to report.
+
+
+------------------------------
+; Slow Model Removal Summary ;
+------------------------------
+No paths to report.
+
+
++----------------------------------------+
+; Slow Model Minimum Pulse Width Summary ;
++-------+--------+-----------------------+
+; Clock ; Slack  ; End Point TNS         ;
++-------+--------+-----------------------+
+; Clk   ; -1.380 ; -73.380               ;
++-------+--------+-----------------------+
+
+
++------------------------------------------------------------------------------------------------------------+
+; Slow Model Setup: 'Clk'                                                                                    ;
++--------+-----------+-----------------+--------------+-------------+--------------+------------+------------+
+; Slack  ; From Node ; To Node         ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++--------+-----------+-----------------+--------------+-------------+--------------+------------+------------+
+; -1.372 ; SRAM~53   ; dataOut[5]~reg0 ; Clk          ; Clk         ; 1.000        ; 0.029      ; 2.437      ;
+; -1.314 ; SRAM~56   ; dataOut[0]~reg0 ; Clk          ; Clk         ; 1.000        ; 0.000      ; 2.350      ;
+; -1.253 ; SRAM~54   ; dataOut[6]~reg0 ; Clk          ; Clk         ; 1.000        ; 0.029      ; 2.318      ;
+; -1.224 ; SRAM~49   ; dataOut[1]~reg0 ; Clk          ; Clk         ; 1.000        ; 0.029      ; 2.289      ;
+; -1.215 ; SRAM~62   ; dataOut[6]~reg0 ; Clk          ; Clk         ; 1.000        ; 0.000      ; 2.251      ;
+; -1.195 ; SRAM~14   ; dataOut[6]~reg0 ; Clk          ; Clk         ; 1.000        ; 0.000      ; 2.231      ;
+; -1.151 ; SRAM~52   ; dataOut[4]~reg0 ; Clk          ; Clk         ; 1.000        ; 0.029      ; 2.216      ;
+; -1.125 ; SRAM~48   ; dataOut[0]~reg0 ; Clk          ; Clk         ; 1.000        ; 0.029      ; 2.190      ;
+; -1.114 ; SRAM~9    ; dataOut[1]~reg0 ; Clk          ; Clk         ; 1.000        ; 0.000      ; 2.150      ;
+; -1.112 ; SRAM~10   ; dataOut[2]~reg0 ; Clk          ; Clk         ; 1.000        ; 0.000      ; 2.148      ;
+; -1.097 ; SRAM~51   ; dataOut[3]~reg0 ; Clk          ; Clk         ; 1.000        ; 0.029      ; 2.162      ;
+; -1.067 ; SRAM~60   ; dataOut[4]~reg0 ; Clk          ; Clk         ; 1.000        ; 0.000      ; 2.103      ;
+; -1.063 ; SRAM~61   ; dataOut[5]~reg0 ; Clk          ; Clk         ; 1.000        ; 0.000      ; 2.099      ;
+; -1.056 ; SRAM~59   ; dataOut[3]~reg0 ; Clk          ; Clk         ; 1.000        ; 0.000      ; 2.092      ;
+; -1.051 ; SRAM~63   ; dataOut[7]~reg0 ; Clk          ; Clk         ; 1.000        ; 0.000      ; 2.087      ;
+; -1.045 ; SRAM~25   ; dataOut[1]~reg0 ; Clk          ; Clk         ; 1.000        ; 0.029      ; 2.110      ;
+; -1.039 ; SRAM~13   ; dataOut[5]~reg0 ; Clk          ; Clk         ; 1.000        ; 0.000      ; 2.075      ;
+; -1.029 ; SRAM~15   ; dataOut[7]~reg0 ; Clk          ; Clk         ; 1.000        ; 0.000      ; 2.065      ;
+; -1.019 ; SRAM~18   ; dataOut[2]~reg0 ; Clk          ; Clk         ; 1.000        ; 0.000      ; 2.055      ;
+; -1.018 ; SRAM~37   ; dataOut[5]~reg0 ; Clk          ; Clk         ; 1.000        ; 0.029      ; 2.083      ;
+; -0.999 ; SRAM~32   ; dataOut[0]~reg0 ; Clk          ; Clk         ; 1.000        ; 0.029      ; 2.064      ;
+; -0.993 ; SRAM~8    ; dataOut[0]~reg0 ; Clk          ; Clk         ; 1.000        ; 0.000      ; 2.029      ;
+; -0.988 ; SRAM~1    ; dataOut[1]~reg0 ; Clk          ; Clk         ; 1.000        ; 0.000      ; 2.024      ;
+; -0.974 ; SRAM~16   ; dataOut[0]~reg0 ; Clk          ; Clk         ; 1.000        ; 0.000      ; 2.010      ;
+; -0.946 ; SRAM~50   ; dataOut[2]~reg0 ; Clk          ; Clk         ; 1.000        ; 0.029      ; 2.011      ;
+; -0.942 ; SRAM~38   ; dataOut[6]~reg0 ; Clk          ; Clk         ; 1.000        ; 0.029      ; 2.007      ;
+; -0.915 ; SRAM~33   ; dataOut[1]~reg0 ; Clk          ; Clk         ; 1.000        ; 0.029      ; 1.980      ;
+; -0.910 ; SRAM~55   ; dataOut[7]~reg0 ; Clk          ; Clk         ; 1.000        ; 0.029      ; 1.975      ;
+; -0.891 ; SRAM~30   ; dataOut[6]~reg0 ; Clk          ; Clk         ; 1.000        ; 0.029      ; 1.956      ;
+; -0.875 ; SRAM~6    ; dataOut[6]~reg0 ; Clk          ; Clk         ; 1.000        ; 0.000      ; 1.911      ;
+; -0.866 ; SRAM~12   ; dataOut[4]~reg0 ; Clk          ; Clk         ; 1.000        ; 0.000      ; 1.902      ;
+; -0.852 ; SRAM~11   ; dataOut[3]~reg0 ; Clk          ; Clk         ; 1.000        ; 0.000      ; 1.888      ;
+; -0.820 ; SRAM~34   ; dataOut[2]~reg0 ; Clk          ; Clk         ; 1.000        ; 0.029      ; 1.885      ;
+; -0.791 ; SRAM~36   ; dataOut[4]~reg0 ; Clk          ; Clk         ; 1.000        ; 0.029      ; 1.856      ;
+; -0.785 ; SRAM~35   ; dataOut[3]~reg0 ; Clk          ; Clk         ; 1.000        ; 0.029      ; 1.850      ;
+; -0.785 ; SRAM~39   ; dataOut[7]~reg0 ; Clk          ; Clk         ; 1.000        ; 0.029      ; 1.850      ;
+; -0.763 ; SRAM~27   ; dataOut[3]~reg0 ; Clk          ; Clk         ; 1.000        ; 0.029      ; 1.828      ;
+; -0.762 ; SRAM~28   ; dataOut[4]~reg0 ; Clk          ; Clk         ; 1.000        ; 0.029      ; 1.827      ;
+; -0.746 ; SRAM~2    ; dataOut[2]~reg0 ; Clk          ; Clk         ; 1.000        ; 0.000      ; 1.782      ;
+; -0.734 ; SRAM~41   ; dataOut[1]~reg0 ; Clk          ; Clk         ; 1.000        ; 0.000      ; 1.770      ;
+; -0.729 ; SRAM~4    ; dataOut[4]~reg0 ; Clk          ; Clk         ; 1.000        ; 0.000      ; 1.765      ;
+; -0.727 ; SRAM~3    ; dataOut[3]~reg0 ; Clk          ; Clk         ; 1.000        ; 0.000      ; 1.763      ;
+; -0.725 ; SRAM~5    ; dataOut[5]~reg0 ; Clk          ; Clk         ; 1.000        ; 0.000      ; 1.761      ;
+; -0.724 ; SRAM~7    ; dataOut[7]~reg0 ; Clk          ; Clk         ; 1.000        ; 0.000      ; 1.760      ;
+; -0.697 ; SRAM~29   ; dataOut[5]~reg0 ; Clk          ; Clk         ; 1.000        ; 0.029      ; 1.762      ;
+; -0.687 ; SRAM~31   ; dataOut[7]~reg0 ; Clk          ; Clk         ; 1.000        ; 0.029      ; 1.752      ;
+; -0.680 ; SRAM~0    ; dataOut[0]~reg0 ; Clk          ; Clk         ; 1.000        ; 0.000      ; 1.716      ;
+; -0.645 ; SRAM~42   ; dataOut[2]~reg0 ; Clk          ; Clk         ; 1.000        ; 0.000      ; 1.681      ;
+; -0.587 ; SRAM~57   ; dataOut[1]~reg0 ; Clk          ; Clk         ; 1.000        ; 0.000      ; 1.623      ;
+; -0.462 ; SRAM~58   ; dataOut[2]~reg0 ; Clk          ; Clk         ; 1.000        ; 0.000      ; 1.498      ;
+; -0.456 ; SRAM~17   ; dataOut[1]~reg0 ; Clk          ; Clk         ; 1.000        ; 0.000      ; 1.492      ;
+; -0.451 ; SRAM~40   ; dataOut[0]~reg0 ; Clk          ; Clk         ; 1.000        ; 0.029      ; 1.516      ;
+; -0.351 ; SRAM~46   ; dataOut[6]~reg0 ; Clk          ; Clk         ; 1.000        ; 0.029      ; 1.416      ;
+; -0.286 ; SRAM~22   ; dataOut[6]~reg0 ; Clk          ; Clk         ; 1.000        ; 0.000      ; 1.322      ;
+; -0.202 ; SRAM~45   ; dataOut[5]~reg0 ; Clk          ; Clk         ; 1.000        ; 0.029      ; 1.267      ;
+; -0.201 ; SRAM~44   ; dataOut[4]~reg0 ; Clk          ; Clk         ; 1.000        ; 0.029      ; 1.266      ;
+; -0.200 ; SRAM~47   ; dataOut[7]~reg0 ; Clk          ; Clk         ; 1.000        ; 0.029      ; 1.265      ;
+; -0.199 ; SRAM~43   ; dataOut[3]~reg0 ; Clk          ; Clk         ; 1.000        ; 0.029      ; 1.264      ;
+; -0.145 ; SRAM~23   ; dataOut[7]~reg0 ; Clk          ; Clk         ; 1.000        ; 0.000      ; 1.181      ;
+; -0.144 ; SRAM~26   ; dataOut[2]~reg0 ; Clk          ; Clk         ; 1.000        ; 0.000      ; 1.180      ;
+; -0.143 ; SRAM~21   ; dataOut[5]~reg0 ; Clk          ; Clk         ; 1.000        ; 0.000      ; 1.179      ;
+; -0.143 ; SRAM~20   ; dataOut[4]~reg0 ; Clk          ; Clk         ; 1.000        ; 0.000      ; 1.179      ;
+; -0.143 ; SRAM~19   ; dataOut[3]~reg0 ; Clk          ; Clk         ; 1.000        ; 0.000      ; 1.179      ;
+; -0.140 ; SRAM~24   ; dataOut[0]~reg0 ; Clk          ; Clk         ; 1.000        ; 0.000      ; 1.176      ;
++--------+-----------+-----------------+--------------+-------------+--------------+------------+------------+
+
+
++-----------------------------------------------------------------------------------------------------------+
+; Slow Model Hold: 'Clk'                                                                                    ;
++-------+-----------+-----------------+--------------+-------------+--------------+------------+------------+
+; Slack ; From Node ; To Node         ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+-----------+-----------------+--------------+-------------+--------------+------------+------------+
+; 0.910 ; SRAM~24   ; dataOut[0]~reg0 ; Clk          ; Clk         ; 0.000        ; 0.000      ; 1.176      ;
+; 0.913 ; SRAM~19   ; dataOut[3]~reg0 ; Clk          ; Clk         ; 0.000        ; 0.000      ; 1.179      ;
+; 0.913 ; SRAM~20   ; dataOut[4]~reg0 ; Clk          ; Clk         ; 0.000        ; 0.000      ; 1.179      ;
+; 0.913 ; SRAM~21   ; dataOut[5]~reg0 ; Clk          ; Clk         ; 0.000        ; 0.000      ; 1.179      ;
+; 0.914 ; SRAM~26   ; dataOut[2]~reg0 ; Clk          ; Clk         ; 0.000        ; 0.000      ; 1.180      ;
+; 0.915 ; SRAM~23   ; dataOut[7]~reg0 ; Clk          ; Clk         ; 0.000        ; 0.000      ; 1.181      ;
+; 0.969 ; SRAM~43   ; dataOut[3]~reg0 ; Clk          ; Clk         ; 0.000        ; 0.029      ; 1.264      ;
+; 0.970 ; SRAM~47   ; dataOut[7]~reg0 ; Clk          ; Clk         ; 0.000        ; 0.029      ; 1.265      ;
+; 0.971 ; SRAM~44   ; dataOut[4]~reg0 ; Clk          ; Clk         ; 0.000        ; 0.029      ; 1.266      ;
+; 0.972 ; SRAM~45   ; dataOut[5]~reg0 ; Clk          ; Clk         ; 0.000        ; 0.029      ; 1.267      ;
+; 1.056 ; SRAM~22   ; dataOut[6]~reg0 ; Clk          ; Clk         ; 0.000        ; 0.000      ; 1.322      ;
+; 1.121 ; SRAM~46   ; dataOut[6]~reg0 ; Clk          ; Clk         ; 0.000        ; 0.029      ; 1.416      ;
+; 1.221 ; SRAM~40   ; dataOut[0]~reg0 ; Clk          ; Clk         ; 0.000        ; 0.029      ; 1.516      ;
+; 1.226 ; SRAM~17   ; dataOut[1]~reg0 ; Clk          ; Clk         ; 0.000        ; 0.000      ; 1.492      ;
+; 1.232 ; SRAM~58   ; dataOut[2]~reg0 ; Clk          ; Clk         ; 0.000        ; 0.000      ; 1.498      ;
+; 1.357 ; SRAM~57   ; dataOut[1]~reg0 ; Clk          ; Clk         ; 0.000        ; 0.000      ; 1.623      ;
+; 1.415 ; SRAM~42   ; dataOut[2]~reg0 ; Clk          ; Clk         ; 0.000        ; 0.000      ; 1.681      ;
+; 1.450 ; SRAM~0    ; dataOut[0]~reg0 ; Clk          ; Clk         ; 0.000        ; 0.000      ; 1.716      ;
+; 1.457 ; SRAM~31   ; dataOut[7]~reg0 ; Clk          ; Clk         ; 0.000        ; 0.029      ; 1.752      ;
+; 1.467 ; SRAM~29   ; dataOut[5]~reg0 ; Clk          ; Clk         ; 0.000        ; 0.029      ; 1.762      ;
+; 1.494 ; SRAM~7    ; dataOut[7]~reg0 ; Clk          ; Clk         ; 0.000        ; 0.000      ; 1.760      ;
+; 1.495 ; SRAM~5    ; dataOut[5]~reg0 ; Clk          ; Clk         ; 0.000        ; 0.000      ; 1.761      ;
+; 1.497 ; SRAM~3    ; dataOut[3]~reg0 ; Clk          ; Clk         ; 0.000        ; 0.000      ; 1.763      ;
+; 1.499 ; SRAM~4    ; dataOut[4]~reg0 ; Clk          ; Clk         ; 0.000        ; 0.000      ; 1.765      ;
+; 1.504 ; SRAM~41   ; dataOut[1]~reg0 ; Clk          ; Clk         ; 0.000        ; 0.000      ; 1.770      ;
+; 1.516 ; SRAM~2    ; dataOut[2]~reg0 ; Clk          ; Clk         ; 0.000        ; 0.000      ; 1.782      ;
+; 1.532 ; SRAM~28   ; dataOut[4]~reg0 ; Clk          ; Clk         ; 0.000        ; 0.029      ; 1.827      ;
+; 1.533 ; SRAM~27   ; dataOut[3]~reg0 ; Clk          ; Clk         ; 0.000        ; 0.029      ; 1.828      ;
+; 1.555 ; SRAM~35   ; dataOut[3]~reg0 ; Clk          ; Clk         ; 0.000        ; 0.029      ; 1.850      ;
+; 1.555 ; SRAM~39   ; dataOut[7]~reg0 ; Clk          ; Clk         ; 0.000        ; 0.029      ; 1.850      ;
+; 1.561 ; SRAM~36   ; dataOut[4]~reg0 ; Clk          ; Clk         ; 0.000        ; 0.029      ; 1.856      ;
+; 1.590 ; SRAM~34   ; dataOut[2]~reg0 ; Clk          ; Clk         ; 0.000        ; 0.029      ; 1.885      ;
+; 1.622 ; SRAM~11   ; dataOut[3]~reg0 ; Clk          ; Clk         ; 0.000        ; 0.000      ; 1.888      ;
+; 1.636 ; SRAM~12   ; dataOut[4]~reg0 ; Clk          ; Clk         ; 0.000        ; 0.000      ; 1.902      ;
+; 1.645 ; SRAM~6    ; dataOut[6]~reg0 ; Clk          ; Clk         ; 0.000        ; 0.000      ; 1.911      ;
+; 1.661 ; SRAM~30   ; dataOut[6]~reg0 ; Clk          ; Clk         ; 0.000        ; 0.029      ; 1.956      ;
+; 1.680 ; SRAM~55   ; dataOut[7]~reg0 ; Clk          ; Clk         ; 0.000        ; 0.029      ; 1.975      ;
+; 1.685 ; SRAM~33   ; dataOut[1]~reg0 ; Clk          ; Clk         ; 0.000        ; 0.029      ; 1.980      ;
+; 1.712 ; SRAM~38   ; dataOut[6]~reg0 ; Clk          ; Clk         ; 0.000        ; 0.029      ; 2.007      ;
+; 1.716 ; SRAM~50   ; dataOut[2]~reg0 ; Clk          ; Clk         ; 0.000        ; 0.029      ; 2.011      ;
+; 1.744 ; SRAM~16   ; dataOut[0]~reg0 ; Clk          ; Clk         ; 0.000        ; 0.000      ; 2.010      ;
+; 1.758 ; SRAM~1    ; dataOut[1]~reg0 ; Clk          ; Clk         ; 0.000        ; 0.000      ; 2.024      ;
+; 1.763 ; SRAM~8    ; dataOut[0]~reg0 ; Clk          ; Clk         ; 0.000        ; 0.000      ; 2.029      ;
+; 1.769 ; SRAM~32   ; dataOut[0]~reg0 ; Clk          ; Clk         ; 0.000        ; 0.029      ; 2.064      ;
+; 1.788 ; SRAM~37   ; dataOut[5]~reg0 ; Clk          ; Clk         ; 0.000        ; 0.029      ; 2.083      ;
+; 1.789 ; SRAM~18   ; dataOut[2]~reg0 ; Clk          ; Clk         ; 0.000        ; 0.000      ; 2.055      ;
+; 1.799 ; SRAM~15   ; dataOut[7]~reg0 ; Clk          ; Clk         ; 0.000        ; 0.000      ; 2.065      ;
+; 1.809 ; SRAM~13   ; dataOut[5]~reg0 ; Clk          ; Clk         ; 0.000        ; 0.000      ; 2.075      ;
+; 1.815 ; SRAM~25   ; dataOut[1]~reg0 ; Clk          ; Clk         ; 0.000        ; 0.029      ; 2.110      ;
+; 1.821 ; SRAM~63   ; dataOut[7]~reg0 ; Clk          ; Clk         ; 0.000        ; 0.000      ; 2.087      ;
+; 1.826 ; SRAM~59   ; dataOut[3]~reg0 ; Clk          ; Clk         ; 0.000        ; 0.000      ; 2.092      ;
+; 1.833 ; SRAM~61   ; dataOut[5]~reg0 ; Clk          ; Clk         ; 0.000        ; 0.000      ; 2.099      ;
+; 1.837 ; SRAM~60   ; dataOut[4]~reg0 ; Clk          ; Clk         ; 0.000        ; 0.000      ; 2.103      ;
+; 1.867 ; SRAM~51   ; dataOut[3]~reg0 ; Clk          ; Clk         ; 0.000        ; 0.029      ; 2.162      ;
+; 1.882 ; SRAM~10   ; dataOut[2]~reg0 ; Clk          ; Clk         ; 0.000        ; 0.000      ; 2.148      ;
+; 1.884 ; SRAM~9    ; dataOut[1]~reg0 ; Clk          ; Clk         ; 0.000        ; 0.000      ; 2.150      ;
+; 1.895 ; SRAM~48   ; dataOut[0]~reg0 ; Clk          ; Clk         ; 0.000        ; 0.029      ; 2.190      ;
+; 1.921 ; SRAM~52   ; dataOut[4]~reg0 ; Clk          ; Clk         ; 0.000        ; 0.029      ; 2.216      ;
+; 1.965 ; SRAM~14   ; dataOut[6]~reg0 ; Clk          ; Clk         ; 0.000        ; 0.000      ; 2.231      ;
+; 1.985 ; SRAM~62   ; dataOut[6]~reg0 ; Clk          ; Clk         ; 0.000        ; 0.000      ; 2.251      ;
+; 1.994 ; SRAM~49   ; dataOut[1]~reg0 ; Clk          ; Clk         ; 0.000        ; 0.029      ; 2.289      ;
+; 2.023 ; SRAM~54   ; dataOut[6]~reg0 ; Clk          ; Clk         ; 0.000        ; 0.029      ; 2.318      ;
+; 2.084 ; SRAM~56   ; dataOut[0]~reg0 ; Clk          ; Clk         ; 0.000        ; 0.000      ; 2.350      ;
+; 2.142 ; SRAM~53   ; dataOut[5]~reg0 ; Clk          ; Clk         ; 0.000        ; 0.029      ; 2.437      ;
++-------+-----------+-----------------+--------------+-------------+--------------+------------+------------+
+
+
++------------------------------------------------------------------------------------------+
+; Slow Model Minimum Pulse Width: 'Clk'                                                    ;
++--------+--------------+----------------+------------------+-------+------------+---------+
+; Slack  ; Actual Width ; Required Width ; Type             ; Clock ; Clock Edge ; Target  ;
++--------+--------------+----------------+------------------+-------+------------+---------+
+; -1.380 ; 1.000        ; 2.380          ; Port Rate        ; Clk   ; Rise       ; Clk     ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; Clk   ; Rise       ; SRAM~0  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; Clk   ; Rise       ; SRAM~0  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; Clk   ; Rise       ; SRAM~1  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; Clk   ; Rise       ; SRAM~1  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; Clk   ; Rise       ; SRAM~10 ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; Clk   ; Rise       ; SRAM~10 ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; Clk   ; Rise       ; SRAM~11 ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; Clk   ; Rise       ; SRAM~11 ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; Clk   ; Rise       ; SRAM~12 ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; Clk   ; Rise       ; SRAM~12 ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; Clk   ; Rise       ; SRAM~13 ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; Clk   ; Rise       ; SRAM~13 ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; Clk   ; Rise       ; SRAM~14 ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; Clk   ; Rise       ; SRAM~14 ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; Clk   ; Rise       ; SRAM~15 ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; Clk   ; Rise       ; SRAM~15 ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; Clk   ; Rise       ; SRAM~16 ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; Clk   ; Rise       ; SRAM~16 ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; Clk   ; Rise       ; SRAM~17 ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; Clk   ; Rise       ; SRAM~17 ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; Clk   ; Rise       ; SRAM~18 ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; Clk   ; Rise       ; SRAM~18 ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; Clk   ; Rise       ; SRAM~19 ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; Clk   ; Rise       ; SRAM~19 ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; Clk   ; Rise       ; SRAM~2  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; Clk   ; Rise       ; SRAM~2  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; Clk   ; Rise       ; SRAM~20 ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; Clk   ; Rise       ; SRAM~20 ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; Clk   ; Rise       ; SRAM~21 ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; Clk   ; Rise       ; SRAM~21 ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; Clk   ; Rise       ; SRAM~22 ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; Clk   ; Rise       ; SRAM~22 ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; Clk   ; Rise       ; SRAM~23 ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; Clk   ; Rise       ; SRAM~23 ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; Clk   ; Rise       ; SRAM~24 ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; Clk   ; Rise       ; SRAM~24 ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; Clk   ; Rise       ; SRAM~25 ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; Clk   ; Rise       ; SRAM~25 ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; Clk   ; Rise       ; SRAM~26 ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; Clk   ; Rise       ; SRAM~26 ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; Clk   ; Rise       ; SRAM~27 ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; Clk   ; Rise       ; SRAM~27 ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; Clk   ; Rise       ; SRAM~28 ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; Clk   ; Rise       ; SRAM~28 ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; Clk   ; Rise       ; SRAM~29 ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; Clk   ; Rise       ; SRAM~29 ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; Clk   ; Rise       ; SRAM~3  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; Clk   ; Rise       ; SRAM~3  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; Clk   ; Rise       ; SRAM~30 ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; Clk   ; Rise       ; SRAM~30 ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; Clk   ; Rise       ; SRAM~31 ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; Clk   ; Rise       ; SRAM~31 ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; Clk   ; Rise       ; SRAM~32 ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; Clk   ; Rise       ; SRAM~32 ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; Clk   ; Rise       ; SRAM~33 ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; Clk   ; Rise       ; SRAM~33 ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; Clk   ; Rise       ; SRAM~34 ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; Clk   ; Rise       ; SRAM~34 ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; Clk   ; Rise       ; SRAM~35 ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; Clk   ; Rise       ; SRAM~35 ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; Clk   ; Rise       ; SRAM~36 ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; Clk   ; Rise       ; SRAM~36 ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; Clk   ; Rise       ; SRAM~37 ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; Clk   ; Rise       ; SRAM~37 ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; Clk   ; Rise       ; SRAM~38 ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; Clk   ; Rise       ; SRAM~38 ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; Clk   ; Rise       ; SRAM~39 ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; Clk   ; Rise       ; SRAM~39 ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; Clk   ; Rise       ; SRAM~4  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; Clk   ; Rise       ; SRAM~4  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; Clk   ; Rise       ; SRAM~40 ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; Clk   ; Rise       ; SRAM~40 ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; Clk   ; Rise       ; SRAM~41 ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; Clk   ; Rise       ; SRAM~41 ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; Clk   ; Rise       ; SRAM~42 ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; Clk   ; Rise       ; SRAM~42 ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; Clk   ; Rise       ; SRAM~43 ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; Clk   ; Rise       ; SRAM~43 ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; Clk   ; Rise       ; SRAM~44 ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; Clk   ; Rise       ; SRAM~44 ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; Clk   ; Rise       ; SRAM~45 ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; Clk   ; Rise       ; SRAM~45 ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; Clk   ; Rise       ; SRAM~46 ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; Clk   ; Rise       ; SRAM~46 ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; Clk   ; Rise       ; SRAM~47 ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; Clk   ; Rise       ; SRAM~47 ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; Clk   ; Rise       ; SRAM~48 ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; Clk   ; Rise       ; SRAM~48 ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; Clk   ; Rise       ; SRAM~49 ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; Clk   ; Rise       ; SRAM~49 ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; Clk   ; Rise       ; SRAM~5  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; Clk   ; Rise       ; SRAM~5  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; Clk   ; Rise       ; SRAM~50 ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; Clk   ; Rise       ; SRAM~50 ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; Clk   ; Rise       ; SRAM~51 ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; Clk   ; Rise       ; SRAM~51 ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; Clk   ; Rise       ; SRAM~52 ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; Clk   ; Rise       ; SRAM~52 ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; Clk   ; Rise       ; SRAM~53 ;
++--------+--------------+----------------+------------------+-------+------------+---------+
+
+
++------------------------------------------------------------------------+
+; Setup Times                                                            ;
++------------+------------+-------+-------+------------+-----------------+
+; Data Port  ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++------------+------------+-------+-------+------------+-----------------+
+; Addr[*]    ; Clk        ; 5.007 ; 5.007 ; Rise       ; Clk             ;
+;  Addr[0]   ; Clk        ; 1.301 ; 1.301 ; Rise       ; Clk             ;
+;  Addr[1]   ; Clk        ; 1.201 ; 1.201 ; Rise       ; Clk             ;
+;  Addr[2]   ; Clk        ; 5.007 ; 5.007 ; Rise       ; Clk             ;
+; CS         ; Clk        ; 5.768 ; 5.768 ; Rise       ; Clk             ;
+; WE         ; Clk        ; 5.933 ; 5.933 ; Rise       ; Clk             ;
+; dataIn[*]  ; Clk        ; 3.825 ; 3.825 ; Rise       ; Clk             ;
+;  dataIn[0] ; Clk        ; 3.685 ; 3.685 ; Rise       ; Clk             ;
+;  dataIn[1] ; Clk        ; 3.633 ; 3.633 ; Rise       ; Clk             ;
+;  dataIn[2] ; Clk        ; 3.793 ; 3.793 ; Rise       ; Clk             ;
+;  dataIn[3] ; Clk        ; 3.825 ; 3.825 ; Rise       ; Clk             ;
+;  dataIn[4] ; Clk        ; 3.634 ; 3.634 ; Rise       ; Clk             ;
+;  dataIn[5] ; Clk        ; 3.686 ; 3.686 ; Rise       ; Clk             ;
+;  dataIn[6] ; Clk        ; 3.813 ; 3.813 ; Rise       ; Clk             ;
+;  dataIn[7] ; Clk        ; 3.788 ; 3.788 ; Rise       ; Clk             ;
++------------+------------+-------+-------+------------+-----------------+
+
+
++--------------------------------------------------------------------------+
+; Hold Times                                                               ;
++------------+------------+--------+--------+------------+-----------------+
+; Data Port  ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++------------+------------+--------+--------+------------+-----------------+
+; Addr[*]    ; Clk        ; 0.393  ; 0.393  ; Rise       ; Clk             ;
+;  Addr[0]   ; Clk        ; 0.393  ; 0.393  ; Rise       ; Clk             ;
+;  Addr[1]   ; Clk        ; 0.290  ; 0.290  ; Rise       ; Clk             ;
+;  Addr[2]   ; Clk        ; -3.424 ; -3.424 ; Rise       ; Clk             ;
+; CS         ; Clk        ; -4.839 ; -4.839 ; Rise       ; Clk             ;
+; WE         ; Clk        ; -3.839 ; -3.839 ; Rise       ; Clk             ;
+; dataIn[*]  ; Clk        ; -2.954 ; -2.954 ; Rise       ; Clk             ;
+;  dataIn[0] ; Clk        ; -3.118 ; -3.118 ; Rise       ; Clk             ;
+;  dataIn[1] ; Clk        ; -2.962 ; -2.962 ; Rise       ; Clk             ;
+;  dataIn[2] ; Clk        ; -3.184 ; -3.184 ; Rise       ; Clk             ;
+;  dataIn[3] ; Clk        ; -3.350 ; -3.350 ; Rise       ; Clk             ;
+;  dataIn[4] ; Clk        ; -2.954 ; -2.954 ; Rise       ; Clk             ;
+;  dataIn[5] ; Clk        ; -3.102 ; -3.102 ; Rise       ; Clk             ;
+;  dataIn[6] ; Clk        ; -3.345 ; -3.345 ; Rise       ; Clk             ;
+;  dataIn[7] ; Clk        ; -3.104 ; -3.104 ; Rise       ; Clk             ;
++------------+------------+--------+--------+------------+-----------------+
+
+
++-------------------------------------------------------------------------+
+; Clock to Output Times                                                   ;
++-------------+------------+-------+-------+------------+-----------------+
+; Data Port   ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-------------+------------+-------+-------+------------+-----------------+
+; dataOut[*]  ; Clk        ; 6.893 ; 6.893 ; Rise       ; Clk             ;
+;  dataOut[0] ; Clk        ; 6.386 ; 6.386 ; Rise       ; Clk             ;
+;  dataOut[1] ; Clk        ; 6.627 ; 6.627 ; Rise       ; Clk             ;
+;  dataOut[2] ; Clk        ; 6.386 ; 6.386 ; Rise       ; Clk             ;
+;  dataOut[3] ; Clk        ; 6.680 ; 6.680 ; Rise       ; Clk             ;
+;  dataOut[4] ; Clk        ; 6.569 ; 6.569 ; Rise       ; Clk             ;
+;  dataOut[5] ; Clk        ; 6.893 ; 6.893 ; Rise       ; Clk             ;
+;  dataOut[6] ; Clk        ; 6.866 ; 6.866 ; Rise       ; Clk             ;
+;  dataOut[7] ; Clk        ; 6.672 ; 6.672 ; Rise       ; Clk             ;
++-------------+------------+-------+-------+------------+-----------------+
+
+
++-------------------------------------------------------------------------+
+; Minimum Clock to Output Times                                           ;
++-------------+------------+-------+-------+------------+-----------------+
+; Data Port   ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-------------+------------+-------+-------+------------+-----------------+
+; dataOut[*]  ; Clk        ; 6.386 ; 6.386 ; Rise       ; Clk             ;
+;  dataOut[0] ; Clk        ; 6.386 ; 6.386 ; Rise       ; Clk             ;
+;  dataOut[1] ; Clk        ; 6.627 ; 6.627 ; Rise       ; Clk             ;
+;  dataOut[2] ; Clk        ; 6.386 ; 6.386 ; Rise       ; Clk             ;
+;  dataOut[3] ; Clk        ; 6.680 ; 6.680 ; Rise       ; Clk             ;
+;  dataOut[4] ; Clk        ; 6.569 ; 6.569 ; Rise       ; Clk             ;
+;  dataOut[5] ; Clk        ; 6.893 ; 6.893 ; Rise       ; Clk             ;
+;  dataOut[6] ; Clk        ; 6.866 ; 6.866 ; Rise       ; Clk             ;
+;  dataOut[7] ; Clk        ; 6.672 ; 6.672 ; Rise       ; Clk             ;
++-------------+------------+-------+-------+------------+-----------------+
+
+
++--------------------------------+
+; Fast Model Setup Summary       ;
++-------+--------+---------------+
+; Clock ; Slack  ; End Point TNS ;
++-------+--------+---------------+
+; Clk   ; -0.055 ; -0.102        ;
++-------+--------+---------------+
+
+
++-------------------------------+
+; Fast Model Hold Summary       ;
++-------+-------+---------------+
+; Clock ; Slack ; End Point TNS ;
++-------+-------+---------------+
+; Clk   ; 0.427 ; 0.000         ;
++-------+-------+---------------+
+
+
+-------------------------------
+; Fast Model Recovery Summary ;
+-------------------------------
+No paths to report.
+
+
+------------------------------
+; Fast Model Removal Summary ;
+------------------------------
+No paths to report.
+
+
++----------------------------------------+
+; Fast Model Minimum Pulse Width Summary ;
++-------+--------+-----------------------+
+; Clock ; Slack  ; End Point TNS         ;
++-------+--------+-----------------------+
+; Clk   ; -1.380 ; -73.380               ;
++-------+--------+-----------------------+
+
+
++------------------------------------------------------------------------------------------------------------+
+; Fast Model Setup: 'Clk'                                                                                    ;
++--------+-----------+-----------------+--------------+-------------+--------------+------------+------------+
+; Slack  ; From Node ; To Node         ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++--------+-----------+-----------------+--------------+-------------+--------------+------------+------------+
+; -0.055 ; SRAM~53   ; dataOut[5]~reg0 ; Clk          ; Clk         ; 1.000        ; 0.024      ; 1.111      ;
+; -0.047 ; SRAM~56   ; dataOut[0]~reg0 ; Clk          ; Clk         ; 1.000        ; 0.000      ; 1.079      ;
+; 0.004  ; SRAM~62   ; dataOut[6]~reg0 ; Clk          ; Clk         ; 1.000        ; 0.000      ; 1.028      ;
+; 0.009  ; SRAM~54   ; dataOut[6]~reg0 ; Clk          ; Clk         ; 1.000        ; 0.024      ; 1.047      ;
+; 0.014  ; SRAM~49   ; dataOut[1]~reg0 ; Clk          ; Clk         ; 1.000        ; 0.024      ; 1.042      ;
+; 0.019  ; SRAM~14   ; dataOut[6]~reg0 ; Clk          ; Clk         ; 1.000        ; 0.000      ; 1.013      ;
+; 0.039  ; SRAM~52   ; dataOut[4]~reg0 ; Clk          ; Clk         ; 1.000        ; 0.024      ; 1.017      ;
+; 0.048  ; SRAM~9    ; dataOut[1]~reg0 ; Clk          ; Clk         ; 1.000        ; 0.000      ; 0.984      ;
+; 0.053  ; SRAM~48   ; dataOut[0]~reg0 ; Clk          ; Clk         ; 1.000        ; 0.024      ; 1.003      ;
+; 0.056  ; SRAM~10   ; dataOut[2]~reg0 ; Clk          ; Clk         ; 1.000        ; 0.000      ; 0.976      ;
+; 0.060  ; SRAM~60   ; dataOut[4]~reg0 ; Clk          ; Clk         ; 1.000        ; 0.000      ; 0.972      ;
+; 0.065  ; SRAM~61   ; dataOut[5]~reg0 ; Clk          ; Clk         ; 1.000        ; 0.000      ; 0.967      ;
+; 0.068  ; SRAM~59   ; dataOut[3]~reg0 ; Clk          ; Clk         ; 1.000        ; 0.000      ; 0.964      ;
+; 0.070  ; SRAM~1    ; dataOut[1]~reg0 ; Clk          ; Clk         ; 1.000        ; 0.000      ; 0.962      ;
+; 0.071  ; SRAM~63   ; dataOut[7]~reg0 ; Clk          ; Clk         ; 1.000        ; 0.000      ; 0.961      ;
+; 0.073  ; SRAM~51   ; dataOut[3]~reg0 ; Clk          ; Clk         ; 1.000        ; 0.024      ; 0.983      ;
+; 0.075  ; SRAM~32   ; dataOut[0]~reg0 ; Clk          ; Clk         ; 1.000        ; 0.024      ; 0.981      ;
+; 0.076  ; SRAM~37   ; dataOut[5]~reg0 ; Clk          ; Clk         ; 1.000        ; 0.024      ; 0.980      ;
+; 0.082  ; SRAM~25   ; dataOut[1]~reg0 ; Clk          ; Clk         ; 1.000        ; 0.024      ; 0.974      ;
+; 0.092  ; SRAM~18   ; dataOut[2]~reg0 ; Clk          ; Clk         ; 1.000        ; 0.000      ; 0.940      ;
+; 0.097  ; SRAM~13   ; dataOut[5]~reg0 ; Clk          ; Clk         ; 1.000        ; 0.000      ; 0.935      ;
+; 0.105  ; SRAM~15   ; dataOut[7]~reg0 ; Clk          ; Clk         ; 1.000        ; 0.000      ; 0.927      ;
+; 0.111  ; SRAM~8    ; dataOut[0]~reg0 ; Clk          ; Clk         ; 1.000        ; 0.000      ; 0.921      ;
+; 0.114  ; SRAM~38   ; dataOut[6]~reg0 ; Clk          ; Clk         ; 1.000        ; 0.024      ; 0.942      ;
+; 0.116  ; SRAM~16   ; dataOut[0]~reg0 ; Clk          ; Clk         ; 1.000        ; 0.000      ; 0.916      ;
+; 0.118  ; SRAM~33   ; dataOut[1]~reg0 ; Clk          ; Clk         ; 1.000        ; 0.024      ; 0.938      ;
+; 0.130  ; SRAM~6    ; dataOut[6]~reg0 ; Clk          ; Clk         ; 1.000        ; 0.000      ; 0.902      ;
+; 0.140  ; SRAM~50   ; dataOut[2]~reg0 ; Clk          ; Clk         ; 1.000        ; 0.024      ; 0.916      ;
+; 0.154  ; SRAM~30   ; dataOut[6]~reg0 ; Clk          ; Clk         ; 1.000        ; 0.024      ; 0.902      ;
+; 0.156  ; SRAM~55   ; dataOut[7]~reg0 ; Clk          ; Clk         ; 1.000        ; 0.024      ; 0.900      ;
+; 0.163  ; SRAM~34   ; dataOut[2]~reg0 ; Clk          ; Clk         ; 1.000        ; 0.024      ; 0.893      ;
+; 0.171  ; SRAM~12   ; dataOut[4]~reg0 ; Clk          ; Clk         ; 1.000        ; 0.000      ; 0.861      ;
+; 0.173  ; SRAM~36   ; dataOut[4]~reg0 ; Clk          ; Clk         ; 1.000        ; 0.024      ; 0.883      ;
+; 0.177  ; SRAM~39   ; dataOut[7]~reg0 ; Clk          ; Clk         ; 1.000        ; 0.024      ; 0.879      ;
+; 0.178  ; SRAM~35   ; dataOut[3]~reg0 ; Clk          ; Clk         ; 1.000        ; 0.024      ; 0.878      ;
+; 0.181  ; SRAM~11   ; dataOut[3]~reg0 ; Clk          ; Clk         ; 1.000        ; 0.000      ; 0.851      ;
+; 0.193  ; SRAM~2    ; dataOut[2]~reg0 ; Clk          ; Clk         ; 1.000        ; 0.000      ; 0.839      ;
+; 0.201  ; SRAM~4    ; dataOut[4]~reg0 ; Clk          ; Clk         ; 1.000        ; 0.000      ; 0.831      ;
+; 0.202  ; SRAM~3    ; dataOut[3]~reg0 ; Clk          ; Clk         ; 1.000        ; 0.000      ; 0.830      ;
+; 0.205  ; SRAM~5    ; dataOut[5]~reg0 ; Clk          ; Clk         ; 1.000        ; 0.000      ; 0.827      ;
+; 0.206  ; SRAM~7    ; dataOut[7]~reg0 ; Clk          ; Clk         ; 1.000        ; 0.000      ; 0.826      ;
+; 0.218  ; SRAM~0    ; dataOut[0]~reg0 ; Clk          ; Clk         ; 1.000        ; 0.000      ; 0.814      ;
+; 0.220  ; SRAM~41   ; dataOut[1]~reg0 ; Clk          ; Clk         ; 1.000        ; 0.000      ; 0.812      ;
+; 0.223  ; SRAM~28   ; dataOut[4]~reg0 ; Clk          ; Clk         ; 1.000        ; 0.024      ; 0.833      ;
+; 0.223  ; SRAM~27   ; dataOut[3]~reg0 ; Clk          ; Clk         ; 1.000        ; 0.024      ; 0.833      ;
+; 0.241  ; SRAM~29   ; dataOut[5]~reg0 ; Clk          ; Clk         ; 1.000        ; 0.024      ; 0.815      ;
+; 0.246  ; SRAM~31   ; dataOut[7]~reg0 ; Clk          ; Clk         ; 1.000        ; 0.024      ; 0.810      ;
+; 0.260  ; SRAM~42   ; dataOut[2]~reg0 ; Clk          ; Clk         ; 1.000        ; 0.000      ; 0.772      ;
+; 0.295  ; SRAM~57   ; dataOut[1]~reg0 ; Clk          ; Clk         ; 1.000        ; 0.000      ; 0.737      ;
+; 0.301  ; SRAM~17   ; dataOut[1]~reg0 ; Clk          ; Clk         ; 1.000        ; 0.000      ; 0.731      ;
+; 0.314  ; SRAM~40   ; dataOut[0]~reg0 ; Clk          ; Clk         ; 1.000        ; 0.024      ; 0.742      ;
+; 0.342  ; SRAM~58   ; dataOut[2]~reg0 ; Clk          ; Clk         ; 1.000        ; 0.000      ; 0.690      ;
+; 0.367  ; SRAM~46   ; dataOut[6]~reg0 ; Clk          ; Clk         ; 1.000        ; 0.024      ; 0.689      ;
+; 0.382  ; SRAM~22   ; dataOut[6]~reg0 ; Clk          ; Clk         ; 1.000        ; 0.000      ; 0.650      ;
+; 0.425  ; SRAM~45   ; dataOut[5]~reg0 ; Clk          ; Clk         ; 1.000        ; 0.024      ; 0.631      ;
+; 0.425  ; SRAM~44   ; dataOut[4]~reg0 ; Clk          ; Clk         ; 1.000        ; 0.024      ; 0.631      ;
+; 0.426  ; SRAM~47   ; dataOut[7]~reg0 ; Clk          ; Clk         ; 1.000        ; 0.024      ; 0.630      ;
+; 0.428  ; SRAM~43   ; dataOut[3]~reg0 ; Clk          ; Clk         ; 1.000        ; 0.024      ; 0.628      ;
+; 0.450  ; SRAM~23   ; dataOut[7]~reg0 ; Clk          ; Clk         ; 1.000        ; 0.000      ; 0.582      ;
+; 0.451  ; SRAM~26   ; dataOut[2]~reg0 ; Clk          ; Clk         ; 1.000        ; 0.000      ; 0.581      ;
+; 0.452  ; SRAM~21   ; dataOut[5]~reg0 ; Clk          ; Clk         ; 1.000        ; 0.000      ; 0.580      ;
+; 0.452  ; SRAM~20   ; dataOut[4]~reg0 ; Clk          ; Clk         ; 1.000        ; 0.000      ; 0.580      ;
+; 0.452  ; SRAM~19   ; dataOut[3]~reg0 ; Clk          ; Clk         ; 1.000        ; 0.000      ; 0.580      ;
+; 0.453  ; SRAM~24   ; dataOut[0]~reg0 ; Clk          ; Clk         ; 1.000        ; 0.000      ; 0.579      ;
++--------+-----------+-----------------+--------------+-------------+--------------+------------+------------+
+
+
++-----------------------------------------------------------------------------------------------------------+
+; Fast Model Hold: 'Clk'                                                                                    ;
++-------+-----------+-----------------+--------------+-------------+--------------+------------+------------+
+; Slack ; From Node ; To Node         ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+-----------+-----------------+--------------+-------------+--------------+------------+------------+
+; 0.427 ; SRAM~24   ; dataOut[0]~reg0 ; Clk          ; Clk         ; 0.000        ; 0.000      ; 0.579      ;
+; 0.428 ; SRAM~19   ; dataOut[3]~reg0 ; Clk          ; Clk         ; 0.000        ; 0.000      ; 0.580      ;
+; 0.428 ; SRAM~20   ; dataOut[4]~reg0 ; Clk          ; Clk         ; 0.000        ; 0.000      ; 0.580      ;
+; 0.428 ; SRAM~21   ; dataOut[5]~reg0 ; Clk          ; Clk         ; 0.000        ; 0.000      ; 0.580      ;
+; 0.429 ; SRAM~26   ; dataOut[2]~reg0 ; Clk          ; Clk         ; 0.000        ; 0.000      ; 0.581      ;
+; 0.430 ; SRAM~23   ; dataOut[7]~reg0 ; Clk          ; Clk         ; 0.000        ; 0.000      ; 0.582      ;
+; 0.452 ; SRAM~43   ; dataOut[3]~reg0 ; Clk          ; Clk         ; 0.000        ; 0.024      ; 0.628      ;
+; 0.454 ; SRAM~47   ; dataOut[7]~reg0 ; Clk          ; Clk         ; 0.000        ; 0.024      ; 0.630      ;
+; 0.455 ; SRAM~44   ; dataOut[4]~reg0 ; Clk          ; Clk         ; 0.000        ; 0.024      ; 0.631      ;
+; 0.455 ; SRAM~45   ; dataOut[5]~reg0 ; Clk          ; Clk         ; 0.000        ; 0.024      ; 0.631      ;
+; 0.498 ; SRAM~22   ; dataOut[6]~reg0 ; Clk          ; Clk         ; 0.000        ; 0.000      ; 0.650      ;
+; 0.513 ; SRAM~46   ; dataOut[6]~reg0 ; Clk          ; Clk         ; 0.000        ; 0.024      ; 0.689      ;
+; 0.538 ; SRAM~58   ; dataOut[2]~reg0 ; Clk          ; Clk         ; 0.000        ; 0.000      ; 0.690      ;
+; 0.566 ; SRAM~40   ; dataOut[0]~reg0 ; Clk          ; Clk         ; 0.000        ; 0.024      ; 0.742      ;
+; 0.579 ; SRAM~17   ; dataOut[1]~reg0 ; Clk          ; Clk         ; 0.000        ; 0.000      ; 0.731      ;
+; 0.585 ; SRAM~57   ; dataOut[1]~reg0 ; Clk          ; Clk         ; 0.000        ; 0.000      ; 0.737      ;
+; 0.620 ; SRAM~42   ; dataOut[2]~reg0 ; Clk          ; Clk         ; 0.000        ; 0.000      ; 0.772      ;
+; 0.634 ; SRAM~31   ; dataOut[7]~reg0 ; Clk          ; Clk         ; 0.000        ; 0.024      ; 0.810      ;
+; 0.639 ; SRAM~29   ; dataOut[5]~reg0 ; Clk          ; Clk         ; 0.000        ; 0.024      ; 0.815      ;
+; 0.657 ; SRAM~27   ; dataOut[3]~reg0 ; Clk          ; Clk         ; 0.000        ; 0.024      ; 0.833      ;
+; 0.657 ; SRAM~28   ; dataOut[4]~reg0 ; Clk          ; Clk         ; 0.000        ; 0.024      ; 0.833      ;
+; 0.660 ; SRAM~41   ; dataOut[1]~reg0 ; Clk          ; Clk         ; 0.000        ; 0.000      ; 0.812      ;
+; 0.662 ; SRAM~0    ; dataOut[0]~reg0 ; Clk          ; Clk         ; 0.000        ; 0.000      ; 0.814      ;
+; 0.674 ; SRAM~7    ; dataOut[7]~reg0 ; Clk          ; Clk         ; 0.000        ; 0.000      ; 0.826      ;
+; 0.675 ; SRAM~5    ; dataOut[5]~reg0 ; Clk          ; Clk         ; 0.000        ; 0.000      ; 0.827      ;
+; 0.678 ; SRAM~3    ; dataOut[3]~reg0 ; Clk          ; Clk         ; 0.000        ; 0.000      ; 0.830      ;
+; 0.679 ; SRAM~4    ; dataOut[4]~reg0 ; Clk          ; Clk         ; 0.000        ; 0.000      ; 0.831      ;
+; 0.687 ; SRAM~2    ; dataOut[2]~reg0 ; Clk          ; Clk         ; 0.000        ; 0.000      ; 0.839      ;
+; 0.699 ; SRAM~11   ; dataOut[3]~reg0 ; Clk          ; Clk         ; 0.000        ; 0.000      ; 0.851      ;
+; 0.702 ; SRAM~35   ; dataOut[3]~reg0 ; Clk          ; Clk         ; 0.000        ; 0.024      ; 0.878      ;
+; 0.703 ; SRAM~39   ; dataOut[7]~reg0 ; Clk          ; Clk         ; 0.000        ; 0.024      ; 0.879      ;
+; 0.707 ; SRAM~36   ; dataOut[4]~reg0 ; Clk          ; Clk         ; 0.000        ; 0.024      ; 0.883      ;
+; 0.709 ; SRAM~12   ; dataOut[4]~reg0 ; Clk          ; Clk         ; 0.000        ; 0.000      ; 0.861      ;
+; 0.717 ; SRAM~34   ; dataOut[2]~reg0 ; Clk          ; Clk         ; 0.000        ; 0.024      ; 0.893      ;
+; 0.724 ; SRAM~55   ; dataOut[7]~reg0 ; Clk          ; Clk         ; 0.000        ; 0.024      ; 0.900      ;
+; 0.726 ; SRAM~30   ; dataOut[6]~reg0 ; Clk          ; Clk         ; 0.000        ; 0.024      ; 0.902      ;
+; 0.740 ; SRAM~50   ; dataOut[2]~reg0 ; Clk          ; Clk         ; 0.000        ; 0.024      ; 0.916      ;
+; 0.750 ; SRAM~6    ; dataOut[6]~reg0 ; Clk          ; Clk         ; 0.000        ; 0.000      ; 0.902      ;
+; 0.762 ; SRAM~33   ; dataOut[1]~reg0 ; Clk          ; Clk         ; 0.000        ; 0.024      ; 0.938      ;
+; 0.764 ; SRAM~16   ; dataOut[0]~reg0 ; Clk          ; Clk         ; 0.000        ; 0.000      ; 0.916      ;
+; 0.766 ; SRAM~38   ; dataOut[6]~reg0 ; Clk          ; Clk         ; 0.000        ; 0.024      ; 0.942      ;
+; 0.769 ; SRAM~8    ; dataOut[0]~reg0 ; Clk          ; Clk         ; 0.000        ; 0.000      ; 0.921      ;
+; 0.775 ; SRAM~15   ; dataOut[7]~reg0 ; Clk          ; Clk         ; 0.000        ; 0.000      ; 0.927      ;
+; 0.783 ; SRAM~13   ; dataOut[5]~reg0 ; Clk          ; Clk         ; 0.000        ; 0.000      ; 0.935      ;
+; 0.788 ; SRAM~18   ; dataOut[2]~reg0 ; Clk          ; Clk         ; 0.000        ; 0.000      ; 0.940      ;
+; 0.798 ; SRAM~25   ; dataOut[1]~reg0 ; Clk          ; Clk         ; 0.000        ; 0.024      ; 0.974      ;
+; 0.804 ; SRAM~37   ; dataOut[5]~reg0 ; Clk          ; Clk         ; 0.000        ; 0.024      ; 0.980      ;
+; 0.805 ; SRAM~32   ; dataOut[0]~reg0 ; Clk          ; Clk         ; 0.000        ; 0.024      ; 0.981      ;
+; 0.807 ; SRAM~51   ; dataOut[3]~reg0 ; Clk          ; Clk         ; 0.000        ; 0.024      ; 0.983      ;
+; 0.809 ; SRAM~63   ; dataOut[7]~reg0 ; Clk          ; Clk         ; 0.000        ; 0.000      ; 0.961      ;
+; 0.810 ; SRAM~1    ; dataOut[1]~reg0 ; Clk          ; Clk         ; 0.000        ; 0.000      ; 0.962      ;
+; 0.812 ; SRAM~59   ; dataOut[3]~reg0 ; Clk          ; Clk         ; 0.000        ; 0.000      ; 0.964      ;
+; 0.815 ; SRAM~61   ; dataOut[5]~reg0 ; Clk          ; Clk         ; 0.000        ; 0.000      ; 0.967      ;
+; 0.820 ; SRAM~60   ; dataOut[4]~reg0 ; Clk          ; Clk         ; 0.000        ; 0.000      ; 0.972      ;
+; 0.824 ; SRAM~10   ; dataOut[2]~reg0 ; Clk          ; Clk         ; 0.000        ; 0.000      ; 0.976      ;
+; 0.827 ; SRAM~48   ; dataOut[0]~reg0 ; Clk          ; Clk         ; 0.000        ; 0.024      ; 1.003      ;
+; 0.832 ; SRAM~9    ; dataOut[1]~reg0 ; Clk          ; Clk         ; 0.000        ; 0.000      ; 0.984      ;
+; 0.841 ; SRAM~52   ; dataOut[4]~reg0 ; Clk          ; Clk         ; 0.000        ; 0.024      ; 1.017      ;
+; 0.861 ; SRAM~14   ; dataOut[6]~reg0 ; Clk          ; Clk         ; 0.000        ; 0.000      ; 1.013      ;
+; 0.866 ; SRAM~49   ; dataOut[1]~reg0 ; Clk          ; Clk         ; 0.000        ; 0.024      ; 1.042      ;
+; 0.871 ; SRAM~54   ; dataOut[6]~reg0 ; Clk          ; Clk         ; 0.000        ; 0.024      ; 1.047      ;
+; 0.876 ; SRAM~62   ; dataOut[6]~reg0 ; Clk          ; Clk         ; 0.000        ; 0.000      ; 1.028      ;
+; 0.927 ; SRAM~56   ; dataOut[0]~reg0 ; Clk          ; Clk         ; 0.000        ; 0.000      ; 1.079      ;
+; 0.935 ; SRAM~53   ; dataOut[5]~reg0 ; Clk          ; Clk         ; 0.000        ; 0.024      ; 1.111      ;
++-------+-----------+-----------------+--------------+-------------+--------------+------------+------------+
+
+
++------------------------------------------------------------------------------------------+
+; Fast Model Minimum Pulse Width: 'Clk'                                                    ;
++--------+--------------+----------------+------------------+-------+------------+---------+
+; Slack  ; Actual Width ; Required Width ; Type             ; Clock ; Clock Edge ; Target  ;
++--------+--------------+----------------+------------------+-------+------------+---------+
+; -1.380 ; 1.000        ; 2.380          ; Port Rate        ; Clk   ; Rise       ; Clk     ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; Clk   ; Rise       ; SRAM~0  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; Clk   ; Rise       ; SRAM~0  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; Clk   ; Rise       ; SRAM~1  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; Clk   ; Rise       ; SRAM~1  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; Clk   ; Rise       ; SRAM~10 ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; Clk   ; Rise       ; SRAM~10 ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; Clk   ; Rise       ; SRAM~11 ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; Clk   ; Rise       ; SRAM~11 ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; Clk   ; Rise       ; SRAM~12 ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; Clk   ; Rise       ; SRAM~12 ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; Clk   ; Rise       ; SRAM~13 ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; Clk   ; Rise       ; SRAM~13 ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; Clk   ; Rise       ; SRAM~14 ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; Clk   ; Rise       ; SRAM~14 ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; Clk   ; Rise       ; SRAM~15 ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; Clk   ; Rise       ; SRAM~15 ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; Clk   ; Rise       ; SRAM~16 ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; Clk   ; Rise       ; SRAM~16 ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; Clk   ; Rise       ; SRAM~17 ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; Clk   ; Rise       ; SRAM~17 ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; Clk   ; Rise       ; SRAM~18 ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; Clk   ; Rise       ; SRAM~18 ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; Clk   ; Rise       ; SRAM~19 ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; Clk   ; Rise       ; SRAM~19 ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; Clk   ; Rise       ; SRAM~2  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; Clk   ; Rise       ; SRAM~2  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; Clk   ; Rise       ; SRAM~20 ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; Clk   ; Rise       ; SRAM~20 ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; Clk   ; Rise       ; SRAM~21 ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; Clk   ; Rise       ; SRAM~21 ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; Clk   ; Rise       ; SRAM~22 ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; Clk   ; Rise       ; SRAM~22 ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; Clk   ; Rise       ; SRAM~23 ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; Clk   ; Rise       ; SRAM~23 ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; Clk   ; Rise       ; SRAM~24 ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; Clk   ; Rise       ; SRAM~24 ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; Clk   ; Rise       ; SRAM~25 ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; Clk   ; Rise       ; SRAM~25 ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; Clk   ; Rise       ; SRAM~26 ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; Clk   ; Rise       ; SRAM~26 ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; Clk   ; Rise       ; SRAM~27 ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; Clk   ; Rise       ; SRAM~27 ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; Clk   ; Rise       ; SRAM~28 ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; Clk   ; Rise       ; SRAM~28 ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; Clk   ; Rise       ; SRAM~29 ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; Clk   ; Rise       ; SRAM~29 ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; Clk   ; Rise       ; SRAM~3  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; Clk   ; Rise       ; SRAM~3  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; Clk   ; Rise       ; SRAM~30 ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; Clk   ; Rise       ; SRAM~30 ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; Clk   ; Rise       ; SRAM~31 ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; Clk   ; Rise       ; SRAM~31 ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; Clk   ; Rise       ; SRAM~32 ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; Clk   ; Rise       ; SRAM~32 ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; Clk   ; Rise       ; SRAM~33 ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; Clk   ; Rise       ; SRAM~33 ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; Clk   ; Rise       ; SRAM~34 ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; Clk   ; Rise       ; SRAM~34 ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; Clk   ; Rise       ; SRAM~35 ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; Clk   ; Rise       ; SRAM~35 ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; Clk   ; Rise       ; SRAM~36 ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; Clk   ; Rise       ; SRAM~36 ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; Clk   ; Rise       ; SRAM~37 ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; Clk   ; Rise       ; SRAM~37 ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; Clk   ; Rise       ; SRAM~38 ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; Clk   ; Rise       ; SRAM~38 ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; Clk   ; Rise       ; SRAM~39 ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; Clk   ; Rise       ; SRAM~39 ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; Clk   ; Rise       ; SRAM~4  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; Clk   ; Rise       ; SRAM~4  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; Clk   ; Rise       ; SRAM~40 ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; Clk   ; Rise       ; SRAM~40 ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; Clk   ; Rise       ; SRAM~41 ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; Clk   ; Rise       ; SRAM~41 ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; Clk   ; Rise       ; SRAM~42 ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; Clk   ; Rise       ; SRAM~42 ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; Clk   ; Rise       ; SRAM~43 ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; Clk   ; Rise       ; SRAM~43 ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; Clk   ; Rise       ; SRAM~44 ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; Clk   ; Rise       ; SRAM~44 ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; Clk   ; Rise       ; SRAM~45 ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; Clk   ; Rise       ; SRAM~45 ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; Clk   ; Rise       ; SRAM~46 ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; Clk   ; Rise       ; SRAM~46 ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; Clk   ; Rise       ; SRAM~47 ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; Clk   ; Rise       ; SRAM~47 ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; Clk   ; Rise       ; SRAM~48 ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; Clk   ; Rise       ; SRAM~48 ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; Clk   ; Rise       ; SRAM~49 ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; Clk   ; Rise       ; SRAM~49 ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; Clk   ; Rise       ; SRAM~5  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; Clk   ; Rise       ; SRAM~5  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; Clk   ; Rise       ; SRAM~50 ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; Clk   ; Rise       ; SRAM~50 ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; Clk   ; Rise       ; SRAM~51 ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; Clk   ; Rise       ; SRAM~51 ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; Clk   ; Rise       ; SRAM~52 ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; Clk   ; Rise       ; SRAM~52 ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; Clk   ; Rise       ; SRAM~53 ;
++--------+--------------+----------------+------------------+-------+------------+---------+
+
+
++------------------------------------------------------------------------+
+; Setup Times                                                            ;
++------------+------------+-------+-------+------------+-----------------+
+; Data Port  ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++------------+------------+-------+-------+------------+-----------------+
+; Addr[*]    ; Clk        ; 2.620 ; 2.620 ; Rise       ; Clk             ;
+;  Addr[0]   ; Clk        ; 0.303 ; 0.303 ; Rise       ; Clk             ;
+;  Addr[1]   ; Clk        ; 0.163 ; 0.163 ; Rise       ; Clk             ;
+;  Addr[2]   ; Clk        ; 2.620 ; 2.620 ; Rise       ; Clk             ;
+; CS         ; Clk        ; 2.937 ; 2.937 ; Rise       ; Clk             ;
+; WE         ; Clk        ; 3.057 ; 3.057 ; Rise       ; Clk             ;
+; dataIn[*]  ; Clk        ; 2.051 ; 2.051 ; Rise       ; Clk             ;
+;  dataIn[0] ; Clk        ; 2.005 ; 2.005 ; Rise       ; Clk             ;
+;  dataIn[1] ; Clk        ; 1.966 ; 1.966 ; Rise       ; Clk             ;
+;  dataIn[2] ; Clk        ; 2.018 ; 2.018 ; Rise       ; Clk             ;
+;  dataIn[3] ; Clk        ; 2.051 ; 2.051 ; Rise       ; Clk             ;
+;  dataIn[4] ; Clk        ; 1.975 ; 1.975 ; Rise       ; Clk             ;
+;  dataIn[5] ; Clk        ; 2.000 ; 2.000 ; Rise       ; Clk             ;
+;  dataIn[6] ; Clk        ; 2.043 ; 2.043 ; Rise       ; Clk             ;
+;  dataIn[7] ; Clk        ; 2.019 ; 2.019 ; Rise       ; Clk             ;
++------------+------------+-------+-------+------------+-----------------+
+
+
++--------------------------------------------------------------------------+
+; Hold Times                                                               ;
++------------+------------+--------+--------+------------+-----------------+
+; Data Port  ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++------------+------------+--------+--------+------------+-----------------+
+; Addr[*]    ; Clk        ; 0.567  ; 0.567  ; Rise       ; Clk             ;
+;  Addr[0]   ; Clk        ; 0.567  ; 0.567  ; Rise       ; Clk             ;
+;  Addr[1]   ; Clk        ; 0.534  ; 0.534  ; Rise       ; Clk             ;
+;  Addr[2]   ; Clk        ; -1.799 ; -1.799 ; Rise       ; Clk             ;
+; CS         ; Clk        ; -2.512 ; -2.512 ; Rise       ; Clk             ;
+; WE         ; Clk        ; -2.091 ; -2.091 ; Rise       ; Clk             ;
+; dataIn[*]  ; Clk        ; -1.606 ; -1.606 ; Rise       ; Clk             ;
+;  dataIn[0] ; Clk        ; -1.716 ; -1.716 ; Rise       ; Clk             ;
+;  dataIn[1] ; Clk        ; -1.613 ; -1.613 ; Rise       ; Clk             ;
+;  dataIn[2] ; Clk        ; -1.704 ; -1.704 ; Rise       ; Clk             ;
+;  dataIn[3] ; Clk        ; -1.816 ; -1.816 ; Rise       ; Clk             ;
+;  dataIn[4] ; Clk        ; -1.606 ; -1.606 ; Rise       ; Clk             ;
+;  dataIn[5] ; Clk        ; -1.694 ; -1.694 ; Rise       ; Clk             ;
+;  dataIn[6] ; Clk        ; -1.812 ; -1.812 ; Rise       ; Clk             ;
+;  dataIn[7] ; Clk        ; -1.699 ; -1.699 ; Rise       ; Clk             ;
++------------+------------+--------+--------+------------+-----------------+
+
+
++-------------------------------------------------------------------------+
+; Clock to Output Times                                                   ;
++-------------+------------+-------+-------+------------+-----------------+
+; Data Port   ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-------------+------------+-------+-------+------------+-----------------+
+; dataOut[*]  ; Clk        ; 3.899 ; 3.899 ; Rise       ; Clk             ;
+;  dataOut[0] ; Clk        ; 3.661 ; 3.661 ; Rise       ; Clk             ;
+;  dataOut[1] ; Clk        ; 3.771 ; 3.771 ; Rise       ; Clk             ;
+;  dataOut[2] ; Clk        ; 3.661 ; 3.661 ; Rise       ; Clk             ;
+;  dataOut[3] ; Clk        ; 3.819 ; 3.819 ; Rise       ; Clk             ;
+;  dataOut[4] ; Clk        ; 3.767 ; 3.767 ; Rise       ; Clk             ;
+;  dataOut[5] ; Clk        ; 3.899 ; 3.899 ; Rise       ; Clk             ;
+;  dataOut[6] ; Clk        ; 3.880 ; 3.880 ; Rise       ; Clk             ;
+;  dataOut[7] ; Clk        ; 3.815 ; 3.815 ; Rise       ; Clk             ;
++-------------+------------+-------+-------+------------+-----------------+
+
+
++-------------------------------------------------------------------------+
+; Minimum Clock to Output Times                                           ;
++-------------+------------+-------+-------+------------+-----------------+
+; Data Port   ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-------------+------------+-------+-------+------------+-----------------+
+; dataOut[*]  ; Clk        ; 3.661 ; 3.661 ; Rise       ; Clk             ;
+;  dataOut[0] ; Clk        ; 3.661 ; 3.661 ; Rise       ; Clk             ;
+;  dataOut[1] ; Clk        ; 3.771 ; 3.771 ; Rise       ; Clk             ;
+;  dataOut[2] ; Clk        ; 3.661 ; 3.661 ; Rise       ; Clk             ;
+;  dataOut[3] ; Clk        ; 3.819 ; 3.819 ; Rise       ; Clk             ;
+;  dataOut[4] ; Clk        ; 3.767 ; 3.767 ; Rise       ; Clk             ;
+;  dataOut[5] ; Clk        ; 3.899 ; 3.899 ; Rise       ; Clk             ;
+;  dataOut[6] ; Clk        ; 3.880 ; 3.880 ; Rise       ; Clk             ;
+;  dataOut[7] ; Clk        ; 3.815 ; 3.815 ; Rise       ; Clk             ;
++-------------+------------+-------+-------+------------+-----------------+
+
+
++------------------------------------------------------------------------------+
+; Multicorner Timing Analysis Summary                                          ;
++------------------+--------+-------+----------+---------+---------------------+
+; Clock            ; Setup  ; Hold  ; Recovery ; Removal ; Minimum Pulse Width ;
++------------------+--------+-------+----------+---------+---------------------+
+; Worst-case Slack ; -1.372 ; 0.427 ; N/A      ; N/A     ; -1.380              ;
+;  Clk             ; -1.372 ; 0.427 ; N/A      ; N/A     ; -1.380              ;
+; Design-wide TNS  ; -9.574 ; 0.0   ; 0.0      ; 0.0     ; -73.38              ;
+;  Clk             ; -9.574 ; 0.000 ; N/A      ; N/A     ; -73.380             ;
++------------------+--------+-------+----------+---------+---------------------+
+
+
++------------------------------------------------------------------------+
+; Setup Times                                                            ;
++------------+------------+-------+-------+------------+-----------------+
+; Data Port  ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++------------+------------+-------+-------+------------+-----------------+
+; Addr[*]    ; Clk        ; 5.007 ; 5.007 ; Rise       ; Clk             ;
+;  Addr[0]   ; Clk        ; 1.301 ; 1.301 ; Rise       ; Clk             ;
+;  Addr[1]   ; Clk        ; 1.201 ; 1.201 ; Rise       ; Clk             ;
+;  Addr[2]   ; Clk        ; 5.007 ; 5.007 ; Rise       ; Clk             ;
+; CS         ; Clk        ; 5.768 ; 5.768 ; Rise       ; Clk             ;
+; WE         ; Clk        ; 5.933 ; 5.933 ; Rise       ; Clk             ;
+; dataIn[*]  ; Clk        ; 3.825 ; 3.825 ; Rise       ; Clk             ;
+;  dataIn[0] ; Clk        ; 3.685 ; 3.685 ; Rise       ; Clk             ;
+;  dataIn[1] ; Clk        ; 3.633 ; 3.633 ; Rise       ; Clk             ;
+;  dataIn[2] ; Clk        ; 3.793 ; 3.793 ; Rise       ; Clk             ;
+;  dataIn[3] ; Clk        ; 3.825 ; 3.825 ; Rise       ; Clk             ;
+;  dataIn[4] ; Clk        ; 3.634 ; 3.634 ; Rise       ; Clk             ;
+;  dataIn[5] ; Clk        ; 3.686 ; 3.686 ; Rise       ; Clk             ;
+;  dataIn[6] ; Clk        ; 3.813 ; 3.813 ; Rise       ; Clk             ;
+;  dataIn[7] ; Clk        ; 3.788 ; 3.788 ; Rise       ; Clk             ;
++------------+------------+-------+-------+------------+-----------------+
+
+
++--------------------------------------------------------------------------+
+; Hold Times                                                               ;
++------------+------------+--------+--------+------------+-----------------+
+; Data Port  ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++------------+------------+--------+--------+------------+-----------------+
+; Addr[*]    ; Clk        ; 0.567  ; 0.567  ; Rise       ; Clk             ;
+;  Addr[0]   ; Clk        ; 0.567  ; 0.567  ; Rise       ; Clk             ;
+;  Addr[1]   ; Clk        ; 0.534  ; 0.534  ; Rise       ; Clk             ;
+;  Addr[2]   ; Clk        ; -1.799 ; -1.799 ; Rise       ; Clk             ;
+; CS         ; Clk        ; -2.512 ; -2.512 ; Rise       ; Clk             ;
+; WE         ; Clk        ; -2.091 ; -2.091 ; Rise       ; Clk             ;
+; dataIn[*]  ; Clk        ; -1.606 ; -1.606 ; Rise       ; Clk             ;
+;  dataIn[0] ; Clk        ; -1.716 ; -1.716 ; Rise       ; Clk             ;
+;  dataIn[1] ; Clk        ; -1.613 ; -1.613 ; Rise       ; Clk             ;
+;  dataIn[2] ; Clk        ; -1.704 ; -1.704 ; Rise       ; Clk             ;
+;  dataIn[3] ; Clk        ; -1.816 ; -1.816 ; Rise       ; Clk             ;
+;  dataIn[4] ; Clk        ; -1.606 ; -1.606 ; Rise       ; Clk             ;
+;  dataIn[5] ; Clk        ; -1.694 ; -1.694 ; Rise       ; Clk             ;
+;  dataIn[6] ; Clk        ; -1.812 ; -1.812 ; Rise       ; Clk             ;
+;  dataIn[7] ; Clk        ; -1.699 ; -1.699 ; Rise       ; Clk             ;
++------------+------------+--------+--------+------------+-----------------+
+
+
++-------------------------------------------------------------------------+
+; Clock to Output Times                                                   ;
++-------------+------------+-------+-------+------------+-----------------+
+; Data Port   ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-------------+------------+-------+-------+------------+-----------------+
+; dataOut[*]  ; Clk        ; 6.893 ; 6.893 ; Rise       ; Clk             ;
+;  dataOut[0] ; Clk        ; 6.386 ; 6.386 ; Rise       ; Clk             ;
+;  dataOut[1] ; Clk        ; 6.627 ; 6.627 ; Rise       ; Clk             ;
+;  dataOut[2] ; Clk        ; 6.386 ; 6.386 ; Rise       ; Clk             ;
+;  dataOut[3] ; Clk        ; 6.680 ; 6.680 ; Rise       ; Clk             ;
+;  dataOut[4] ; Clk        ; 6.569 ; 6.569 ; Rise       ; Clk             ;
+;  dataOut[5] ; Clk        ; 6.893 ; 6.893 ; Rise       ; Clk             ;
+;  dataOut[6] ; Clk        ; 6.866 ; 6.866 ; Rise       ; Clk             ;
+;  dataOut[7] ; Clk        ; 6.672 ; 6.672 ; Rise       ; Clk             ;
++-------------+------------+-------+-------+------------+-----------------+
+
+
++-------------------------------------------------------------------------+
+; Minimum Clock to Output Times                                           ;
++-------------+------------+-------+-------+------------+-----------------+
+; Data Port   ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-------------+------------+-------+-------+------------+-----------------+
+; dataOut[*]  ; Clk        ; 3.661 ; 3.661 ; Rise       ; Clk             ;
+;  dataOut[0] ; Clk        ; 3.661 ; 3.661 ; Rise       ; Clk             ;
+;  dataOut[1] ; Clk        ; 3.771 ; 3.771 ; Rise       ; Clk             ;
+;  dataOut[2] ; Clk        ; 3.661 ; 3.661 ; Rise       ; Clk             ;
+;  dataOut[3] ; Clk        ; 3.819 ; 3.819 ; Rise       ; Clk             ;
+;  dataOut[4] ; Clk        ; 3.767 ; 3.767 ; Rise       ; Clk             ;
+;  dataOut[5] ; Clk        ; 3.899 ; 3.899 ; Rise       ; Clk             ;
+;  dataOut[6] ; Clk        ; 3.880 ; 3.880 ; Rise       ; Clk             ;
+;  dataOut[7] ; Clk        ; 3.815 ; 3.815 ; Rise       ; Clk             ;
++-------------+------------+-------+-------+------------+-----------------+
+
+
++-------------------------------------------------------------------+
+; Setup Transfers                                                   ;
++------------+----------+----------+----------+----------+----------+
+; From Clock ; To Clock ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++------------+----------+----------+----------+----------+----------+
+; Clk        ; Clk      ; 64       ; 0        ; 0        ; 0        ;
++------------+----------+----------+----------+----------+----------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
+
+
++-------------------------------------------------------------------+
+; Hold Transfers                                                    ;
++------------+----------+----------+----------+----------+----------+
+; From Clock ; To Clock ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++------------+----------+----------+----------+----------+----------+
+; Clk        ; Clk      ; 64       ; 0        ; 0        ; 0        ;
++------------+----------+----------+----------+----------+----------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
+
+
+---------------
+; Report TCCS ;
+---------------
+No dedicated SERDES Transmitter circuitry present in device or used in design
+
+
+---------------
+; Report RSKM ;
+---------------
+No dedicated SERDES Receiver circuitry present in device or used in design
+
+
++------------------------------------------------+
+; Unconstrained Paths                            ;
++---------------------------------+-------+------+
+; Property                        ; Setup ; Hold ;
++---------------------------------+-------+------+
+; Illegal Clocks                  ; 0     ; 0    ;
+; Unconstrained Clocks            ; 0     ; 0    ;
+; Unconstrained Input Ports       ; 13    ; 13   ;
+; Unconstrained Input Port Paths  ; 416   ; 416  ;
+; Unconstrained Output Ports      ; 8     ; 8    ;
+; Unconstrained Output Port Paths ; 8     ; 8    ;
++---------------------------------+-------+------+
+
+
++------------------------------------+
+; TimeQuest Timing Analyzer Messages ;
++------------------------------------+
+Info: *******************************************************************
+Info: Running Quartus II 64-Bit TimeQuest Timing Analyzer
+    Info: Version 13.0.0 Build 156 04/24/2013 SJ Web Edition
+    Info: Processing started: Wed Nov 17 06:45:31 2021
+Info: Command: quartus_sta ram -c ram
+Info: qsta_default_script.tcl version: #1
+Warning (20028): Parallel compilation is not licensed and has been disabled
+Info (21077): Low junction temperature is 0 degrees C
+Info (21077): High junction temperature is 85 degrees C
+Critical Warning (332012): Synopsys Design Constraints File file not found: 'ram.sdc'. A Synopsys Design Constraints File is required by the TimeQuest Timing Analyzer to get proper timing constraints. Without it, the Compiler will not properly optimize the design.
+Info (332142): No user constrained base clocks found in the design. Calling "derive_clocks -period 1.0"
+Info (332105): Deriving Clocks
+    Info (332105): create_clock -period 1.000 -name Clk Clk
+Info: Found TIMEQUEST_REPORT_SCRIPT_INCLUDE_DEFAULT_ANALYSIS = ON
+Info: Analyzing Slow Model
+Critical Warning (332148): Timing requirements not met
+Info (332146): Worst-case setup slack is -1.372
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):    -1.372        -9.574 Clk 
+Info (332146): Worst-case hold slack is 0.910
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):     0.910         0.000 Clk 
+Info (332140): No Recovery paths to report
+Info (332140): No Removal paths to report
+Info (332146): Worst-case minimum pulse width slack is -1.380
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):    -1.380       -73.380 Clk 
+Info (332001): The selected device family is not supported by the report_metastability command.
+Info: Analyzing Fast Model
+Critical Warning (332148): Timing requirements not met
+Info (332146): Worst-case setup slack is -0.055
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):    -0.055        -0.102 Clk 
+Info (332146): Worst-case hold slack is 0.427
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):     0.427         0.000 Clk 
+Info (332140): No Recovery paths to report
+Info (332140): No Removal paths to report
+Info (332146): Worst-case minimum pulse width slack is -1.380
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):    -1.380       -73.380 Clk 
+Info (332001): The selected device family is not supported by the report_metastability command.
+Info (332102): Design is not fully constrained for setup requirements
+Info (332102): Design is not fully constrained for hold requirements
+Info: Quartus II 64-Bit TimeQuest Timing Analyzer was successful. 0 errors, 4 warnings
+    Info: Peak virtual memory: 4537 megabytes
+    Info: Processing ended: Wed Nov 17 06:45:32 2021
+    Info: Elapsed time: 00:00:01
+    Info: Total CPU time (on all processors): 00:00:01
+
+

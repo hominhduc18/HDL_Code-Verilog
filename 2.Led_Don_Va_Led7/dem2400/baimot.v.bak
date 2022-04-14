@@ -1,0 +1,23 @@
+module baimot(ck,rs,bcd1,bcd0);
+input ck,rs;
+output [7:0]bcd1,bcd0;
+reg [7:0]bcd1,bcd0;
+always @(negedge ck or negedge rs)// ck cạnh xuống ko đồng bộ rs thích cực thấp 
+begin 
+if(rs=1'b0)
+   begin
+        bcd1<=4'b0010;
+        bcd0<=4'b0100;
+   end
+else 
+   begin 
+        bcd0<=bcd0-1;
+        if(bcd0==4'b0000)
+          begin
+            bcd0<=4'b1001;
+            bcd1<=bcd1-1;
+        if(bcd1==4'b0000 && bcd0==4'b0000)
+        end
+   end
+end
+endmodule

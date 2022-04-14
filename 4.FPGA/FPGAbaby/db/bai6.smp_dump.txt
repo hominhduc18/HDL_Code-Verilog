@@ -1,0 +1,5 @@
+
+State Machine - |bai6|current_state
+Name current_state.s0 
+current_state.s1 0 
+current_state.s0 1 

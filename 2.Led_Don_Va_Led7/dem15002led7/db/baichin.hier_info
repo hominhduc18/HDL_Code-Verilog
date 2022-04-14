@@ -1,0 +1,78 @@
+|baichin
+CK => CK.IN1
+RS => RS.IN1
+hex0[0] <= giaima:H2.port1
+hex0[1] <= giaima:H2.port1
+hex0[2] <= giaima:H2.port1
+hex0[3] <= giaima:H2.port1
+hex0[4] <= giaima:H2.port1
+hex0[5] <= giaima:H2.port1
+hex0[6] <= giaima:H2.port1
+hex0[7] <= giaima:H2.port1
+hex1[0] <= giaima:H3.port1
+hex1[1] <= giaima:H3.port1
+hex1[2] <= giaima:H3.port1
+hex1[3] <= giaima:H3.port1
+hex1[4] <= giaima:H3.port1
+hex1[5] <= giaima:H3.port1
+hex1[6] <= giaima:H3.port1
+hex1[7] <= giaima:H3.port1
+
+
+|baichin|dem15to00:H1
+ck => bcd0[0]~reg0.CLK
+ck => bcd0[1]~reg0.CLK
+ck => bcd0[2]~reg0.CLK
+ck => bcd0[3]~reg0.CLK
+ck => bcd1[0]~reg0.CLK
+ck => bcd1[1]~reg0.CLK
+ck => bcd1[2]~reg0.CLK
+ck => bcd1[3]~reg0.CLK
+rs => bcd1.OUTPUTSELECT
+rs => bcd1.OUTPUTSELECT
+rs => bcd1.OUTPUTSELECT
+rs => bcd1.OUTPUTSELECT
+rs => bcd0.OUTPUTSELECT
+rs => bcd0.OUTPUTSELECT
+rs => bcd0.OUTPUTSELECT
+rs => bcd0.OUTPUTSELECT
+bcd1[0] <= bcd1[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+bcd1[1] <= bcd1[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+bcd1[2] <= bcd1[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+bcd1[3] <= bcd1[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+bcd0[0] <= bcd0[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+bcd0[1] <= bcd0[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+bcd0[2] <= bcd0[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+bcd0[3] <= bcd0[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|baichin|giaima:H2
+Q[0] => Decoder0.IN3
+Q[1] => Decoder0.IN2
+Q[2] => Decoder0.IN1
+Q[3] => Decoder0.IN0
+hex[0] <= WideOr6.DB_MAX_OUTPUT_PORT_TYPE
+hex[1] <= WideOr5.DB_MAX_OUTPUT_PORT_TYPE
+hex[2] <= WideOr4.DB_MAX_OUTPUT_PORT_TYPE
+hex[3] <= WideOr3.DB_MAX_OUTPUT_PORT_TYPE
+hex[4] <= WideOr2.DB_MAX_OUTPUT_PORT_TYPE
+hex[5] <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
+hex[6] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+hex[7] <= <VCC>
+
+
+|baichin|giaima:H3
+Q[0] => Decoder0.IN3
+Q[1] => Decoder0.IN2
+Q[2] => Decoder0.IN1
+Q[3] => Decoder0.IN0
+hex[0] <= WideOr6.DB_MAX_OUTPUT_PORT_TYPE
+hex[1] <= WideOr5.DB_MAX_OUTPUT_PORT_TYPE
+hex[2] <= WideOr4.DB_MAX_OUTPUT_PORT_TYPE
+hex[3] <= WideOr3.DB_MAX_OUTPUT_PORT_TYPE
+hex[4] <= WideOr2.DB_MAX_OUTPUT_PORT_TYPE
+hex[5] <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
+hex[6] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+hex[7] <= <VCC>
+
+

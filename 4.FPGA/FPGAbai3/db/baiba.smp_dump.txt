@@ -1,0 +1,10 @@
+
+State Machine - |baiba|current_state
+Name current_state.s110 current_state.s11 current_state.s1 current_state.s001 current_state.s00 current_state.s0 current_state.start 
+current_state.start 0 0 0 0 0 0 0 
+current_state.s0 0 0 0 0 0 1 1 
+current_state.s00 0 0 0 0 1 0 1 
+current_state.s001 0 0 0 1 0 0 1 
+current_state.s1 0 0 1 0 0 0 1 
+current_state.s11 0 1 0 0 0 0 1 
+current_state.s110 1 0 0 0 0 0 1 

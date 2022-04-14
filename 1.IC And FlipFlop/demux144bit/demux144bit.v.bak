@@ -1,0 +1,21 @@
+module demux144bit();
+
+
+
+
+
+
+
+
+
+// demux1-4 1 bit 
+
+module demux1_4(D,E,S,Y);
+input D,E;
+input [1:0]S;
+output [3:0]Y;
+assign Y[3]= E&D&~S[1]&~S[0];
+assign Y[2]= E&D&~S[1]&S[0];
+assign Y[1]= E&D&S[1]&~S[0];
+assign Y[0]= E&D&S[1]&S[0];
+endmodule

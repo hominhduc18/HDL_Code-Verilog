@@ -1,0 +1,8 @@
+
+State Machine - |baimot|current_state
+Name current_state.s101 current_state.s10 current_state.s1 current_state.start current_state.s1011 
+current_state.start 0 0 0 0 0 
+current_state.s1 0 0 1 1 0 
+current_state.s10 0 1 0 1 0 
+current_state.s101 1 0 0 1 0 
+current_state.s1011 0 0 0 1 1 

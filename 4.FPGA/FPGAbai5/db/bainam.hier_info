@@ -1,0 +1,12 @@
+|bainam
+rs => current_state~3.DATAIN
+ck => current_state~1.DATAIN
+hex[0] <= hex.DB_MAX_OUTPUT_PORT_TYPE
+hex[1] <= hex.DB_MAX_OUTPUT_PORT_TYPE
+hex[2] <= hex.DB_MAX_OUTPUT_PORT_TYPE
+hex[3] <= hex.DB_MAX_OUTPUT_PORT_TYPE
+hex[4] <= hex[4].DB_MAX_OUTPUT_PORT_TYPE
+hex[5] <= hex[4].DB_MAX_OUTPUT_PORT_TYPE
+hex[6] <= hex.DB_MAX_OUTPUT_PORT_TYPE
+
+
